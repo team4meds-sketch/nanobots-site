@@ -1,0 +1,4 @@
+import {z} from "zod";
+const secureUrl=z.string().max(2048).refine(v=>!v||(()=>{try{return new URL(v).protocol==="https:"}catch{return false}})(),"Нужна ссылка, начинающаяся с https://");
+const cover=z.string().max(2048).refine(v=>!v||/^\/(art|media)\/[a-zA-Z0-9._-]+$/.test(v)||(()=>{try{return new URL(v).protocol==="https:"}catch{return false}})(),"Некорректная ссылка на обложку");
+export const entrySchema=z.object({id:z.string().uuid().optional(),kind:z.enum(["episode","news"]),title:z.string().trim().min(1,"Введите название").max(180),summary:z.string().max(500),body:z.string().max(30000),cover,video_url:secureUrl,published:z.union([z.literal(0),z.literal(1)]),date:z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(s=>!Number.isNaN(Date.parse(s))),revision:z.number().int().min(0)}).refine(v=>v.kind!=="episode"||!v.published||!!v.video_url,{message:"Добавьте ссылку на видео перед публикацией",path:["video_url"]});
