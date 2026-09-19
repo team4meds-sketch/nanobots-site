@@ -41,3 +41,5 @@
  .school-art{width:min(100%,260px);padding-top:48px}
  .school-sticker{right:0;top:0;font-size:20px}
 }
+
+.audience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.audience-grid article{padding:28px;border:2px solid #182344;border-radius:24px;background:#dcf5fa}.audience-grid article:nth-child(2){background:#eee5f9}.audience-grid article:nth-child(3){background:#ffe4e9}.audience-grid strong{font-size:clamp(32px,3.7vw,52px);line-height:1.1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.audience-grid h3{font-size:20px;margin:12px 0}.audience-grid p{font-size:14px;margin:0}.audience-sources{margin-top:20px;font-size:14px;color:#46566b}.audience-sources summary{cursor:pointer;font-weight:bold}.audience-sources p{margin:10px 0}.audience-sources a{text-decoration:underline}@media(max-width:760px){.audience-grid{grid-template-columns:1fr}.audience-grid article{padding:24px}}
