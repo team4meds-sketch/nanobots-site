@@ -4,9 +4,9 @@ import {socials} from "@/lib/content";
 // Source: Pitch_21.09_v01.pptx, supplied by the project team (September 2026).
 // These presentation totals cover all platforms, unlike the live API statistics.
 const formats = [
-  {icon:Film,title:"Интеграции в контент",text:"Нативные упоминания, продакт-плейсмент и брендированные спецвыпуски с медицинской валидацией."},
-  {icon:BookOpen,title:"Образовательные проекты",text:"Совместные уроки, мастер-классы и ролики для клиник, школ и городских фестивалей."},
-  {icon:Users,title:"Лицензирование и мерч",text:"Любимые герои для игрушек, коллабораций и брендированной продукции."},
+  {icon:Film,title:"Интеграции в контент",action:"Хочу сотрудничать",text:"Нативные упоминания, продакт-плейсмент и брендированные спецвыпуски с медицинской валидацией."},
+  {icon:BookOpen,title:"Образовательные проекты",action:"Хочу участвовать",text:"Совместные уроки, мастер-классы и ролики для клиник, школ и городских фестивалей."},
+  {icon:Users,title:"Лицензирование и мерч",action:"Хочу сотрудничать",text:"Любимые герои для игрушек, коллабораций и брендированной продукции."},
 ];
 
 export default function PartnerMediaKit(){
@@ -35,14 +35,14 @@ export default function PartnerMediaKit(){
         {socials.filter(s=>s.name!=="Instagram").map(s=><a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer">{s.name}<ArrowUpRight size={13} aria-hidden="true"/></a>)}
       </div>
 
-      <h3 className="media-kit-formats-title">Создадим историю вместе</h3>
+      <h3 id="collaborate" className="media-kit-formats-title" tabIndex={-1}>Создадим историю вместе</h3>
       <div className="media-kit-formats">
-        {formats.map(({icon:Icon,title,text})=><article key={title}><Icon size={26} aria-hidden="true"/><h4>{title}</h4><p>{text}</p></article>)}
+        {formats.map(({icon:Icon,title,text,action})=><article key={title}><Icon size={26} aria-hidden="true"/><h4>{title}</h4><p>{text}</p><a className="partner-action" href="https://vk.ru/nanobotsmult" target="_blank" rel="noopener noreferrer" aria-label={`${action}: ${title} — связаться в VK`}>{action}<ArrowUpRight size={17} aria-hidden="true"/></a><span className="partner-action-note">Связаться с командой в VK</span></article>)}
       </div>
       <div className="media-kit-press"><strong>Для СМИ</strong><p>Готовые инфоповоды, экспертные комментарии и знакомство с героями и создателями проекта.</p></div>
 
       <div className="media-kit-contact">
-        <div><h3>Есть идея? Давайте обсудим.</h3><p>Подберём формат сотрудничества под ваши задачи.</p></div>
+        <div><h3>Есть идея? Давайте обсудим</h3><p>Подберём формат сотрудничества под ваши задачи</p></div>
         <a className="cta" href="https://vk.ru/nanobotsmult" target="_blank" rel="noopener noreferrer">Связаться с нами в VK<ArrowUpRight size={18} aria-hidden="true"/></a>
       </div>
     </div>

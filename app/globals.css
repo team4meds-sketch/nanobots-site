@@ -104,3 +104,27 @@
  .media-kit-contact{flex-direction:column;align-items:stretch;padding:24px 20px;gap:26px}
  .media-kit-contact h3{font-size:25px}
 }
+
+/* A simpler opening screen and clear entry points for partners. */
+.hero .hero-contact{background:transparent;color:#fff9e9;border-color:#fff9e9;box-shadow:none}
+.hero .hero-contact:hover{background:#fff9e9;color:#182344}
+.hero .hero-actions a:focus-visible{outline-color:#65e3ff}
+.hero .hero-note{font-size:14px;line-height:1.5;max-width:38ch}
+#collaborate{scroll-margin-top:125px}
+.media-kit-formats article{display:flex;flex-direction:column;align-items:flex-start}
+.media-kit-formats article>svg{flex-shrink:0}
+.media-kit-formats article>p{flex:1;margin-bottom:22px}
+.partner-action{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:10px 14px;border:2px solid #182344;border-radius:12px;background:#182344;color:#fff9e9;font-size:14px;font-weight:800;line-height:1.35;max-width:100%}
+.media-kit-formats .partner-action svg{color:currentColor;flex-shrink:0}
+.partner-action:hover{background:#007b9d;border-color:#007b9d}
+.partner-action-note{font-size:12px;color:#526079;margin-top:8px}
+@media(max-width:760px){
+ .hero-actions{gap:12px}
+ .hero-actions .cta{font-size:15px;padding:12px 16px;min-height:48px}
+ .hero .hero-note{margin-top:24px}
+ .media-kit-formats article{display:grid;grid-template-columns:26px minmax(0,1fr)}
+ .media-kit-formats article>p{margin:0 0 10px;font-size:14px}
+ .partner-action,.partner-action-note{grid-column:2}
+ .partner-action{justify-self:start}
+ .partner-action-note{margin-top:0}
+}
