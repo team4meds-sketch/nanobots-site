@@ -128,3 +128,34 @@
  .partner-action{justify-self:start}
  .partner-action-note{margin-top:0}
 }
+
+/* Partner enquiries share one accessible form, with a preset topic. */
+.partner-dialog{width:calc(100% - 32px)!important;max-width:620px!important;max-height:90svh;overflow-y:auto;background:#fff9e9!important;border:2px solid #182344!important;border-radius:26px!important;padding:28px!important;gap:20px!important;color:#182344}
+.partner-dialog-close{position:absolute;right:12px;top:12px;width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:50%;background:transparent;color:#182344}
+.partner-dialog-close:hover{background:#eee9dc}
+.partner-dialog .eyebrow{font-size:11px;padding-right:30px}
+.partner-dialog [data-slot=dialog-title]{font-size:30px;line-height:1.15;margin:12px 26px 12px 0;font-weight:900}
+.partner-dialog [data-slot=dialog-description]{font-size:16px;line-height:1.5;color:#46566b}
+.partner-form{display:grid;gap:16px}
+.partner-field{display:grid;gap:8px;min-width:0}
+.partner-field label,.partner-contacts legend{font-size:14px;font-weight:700;line-height:1.4}
+.partner-field label span{font-size:12px;font-weight:400;color:#526079}
+.partner-field input,.partner-field textarea,.partner-field select{font:inherit;font-size:16px;min-height:44px;height:auto;border:1px solid #9ea7bc;border-radius:10px;background:#fffdf7;padding:10px 12px;box-shadow:none;width:100%}
+.partner-field select{padding-right:34px}
+.partner-field textarea{resize:vertical;min-height:92px;max-height:220px}
+.partner-field [data-slot=native-select-wrapper]{width:100%}
+.partner-field input:focus-visible,.partner-field textarea:focus-visible,.partner-field select:focus-visible{outline:3px solid #008ccc;outline-offset:2px}
+.partner-contacts{border:0;padding:0;margin:0;min-width:0}
+.partner-contacts>p{font-size:13px;color:#526079;margin:4px 0 12px}
+.partner-field-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.partner-honeypot{display:none}
+.partner-form-error{color:#a21130;font-size:14px;margin:0}
+.partner-form-error:empty{display:none}
+.partner-data-note,.partner-direct{font-size:12px;line-height:1.5;margin:0;color:#526079}
+.partner-direct{text-align:center;font-size:14px}
+.partner-direct a{text-decoration:underline;text-underline-offset:3px}
+.partner-submit{justify-content:center;min-height:48px;width:100%}
+.partner-submit svg{flex-shrink:0}
+.media-kit-press .text-link{border:0;background:none;padding:8px 0;font-size:14px;white-space:nowrap;text-decoration:underline}
+.media-kit-contact button:focus-visible{outline-color:#65e3ff}
+@media(max-width:760px){.media-kit-press{flex-wrap:wrap}.media-kit-press p{flex:1;min-width:180px}.partner-dialog{padding:24px 18px!important}.partner-dialog [data-slot=dialog-title]{font-size:26px}.partner-field-pair{grid-template-columns:1fr}}

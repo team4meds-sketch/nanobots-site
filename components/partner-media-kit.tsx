@@ -1,3 +1,8 @@
+"use client";
+
+import {useState} from "react";
+import {Dialog} from "@/components/ui/dialog";
+import PartnerContactForm from "@/components/partner-contact-form";
 import {ArrowUpRight,BookOpen,Film,Users} from "lucide-react";
 import {socials} from "@/lib/content";
 
@@ -10,7 +15,8 @@ const formats = [
 ];
 
 export default function PartnerMediaKit(){
-  return <section id="partners" aria-labelledby="partners-title">
+  const [contactDirection,setContactDirection] = useState<string|null>(null);
+  return <><section id="partners" aria-labelledby="partners-title">
     <div className="media-kit">
       <div className="media-kit-intro">
         <div>
@@ -37,14 +43,14 @@ export default function PartnerMediaKit(){
 
       <h3 id="collaborate" className="media-kit-formats-title" tabIndex={-1}>Создадим историю вместе</h3>
       <div className="media-kit-formats">
-        {formats.map(({icon:Icon,title,text,action})=><article key={title}><Icon size={26} aria-hidden="true"/><h4>{title}</h4><p>{text}</p><a className="partner-action" href="https://vk.ru/nanobotsmult" target="_blank" rel="noopener noreferrer" aria-label={`${action}: ${title} — связаться в VK`}>{action}<ArrowUpRight size={17} aria-hidden="true"/></a><span className="partner-action-note">Связаться с командой в VK</span></article>)}
+        {formats.map(({icon:Icon,title,text,action})=><article key={title}><Icon size={26} aria-hidden="true"/><h4>{title}</h4><p>{text}</p><button type="button" className="partner-action" onClick={()=>setContactDirection(title)} aria-label={`${action}: ${title}`}>{action}<ArrowUpRight size={17} aria-hidden="true"/></button></article>)}
       </div>
-      <div className="media-kit-press"><strong>Для СМИ</strong><p>Готовые инфоповоды, экспертные комментарии и знакомство с героями и создателями проекта.</p></div>
+      <div className="media-kit-press"><strong>Для СМИ</strong><p>Готовые инфоповоды, экспертные комментарии и знакомство с героями и создателями проекта.</p><button type="button" className="text-link" onClick={()=>setContactDirection("Запрос СМИ")}>Написать нам</button></div>
 
       <div className="media-kit-contact">
         <div><h3>Есть идея? Давайте обсудим</h3><p>Подберём формат сотрудничества под ваши задачи</p></div>
-        <a className="cta" href="https://vk.ru/nanobotsmult" target="_blank" rel="noopener noreferrer">Связаться с нами в VK<ArrowUpRight size={18} aria-hidden="true"/></a>
+        <button type="button" className="cta" onClick={()=>setContactDirection("Другая идея")}>Обсудить сотрудничество<ArrowUpRight size={18} aria-hidden="true"/></button>
       </div>
     </div>
-  </section>;
+  </section><Dialog open={contactDirection!==null} onOpenChange={open=>!open&&setContactDirection(null)}>{contactDirection!==null&&<PartnerContactForm key={contactDirection} direction={contactDirection}/>}</Dialog></>;
 }
