@@ -107,6 +107,7 @@
 
 /* A simpler opening screen and clear entry points for partners. */
 .hero .hero-contact{background:transparent;color:#fff9e9;border-color:#fff9e9;box-shadow:none}
+.hero .hero-quiz{border-color:#fff9e9;box-shadow:none}
 .hero .hero-contact:hover{background:#fff9e9;color:#182344}
 .hero .hero-actions a:focus-visible{outline-color:#65e3ff}
 .hero .hero-note{font-size:14px;line-height:1.5;max-width:38ch}
