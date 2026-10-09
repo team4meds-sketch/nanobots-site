@@ -1,13 +1,13 @@
 export type Entry={id:string;kind:"episode"|"news";title:string;summary:string;body:string;cover:string;video_url:string;published:number;date:string;revision:number};
 export const socials=[
-{name:"VK Видео",url:"https://vk.ru/nanobotsmult",short:"VK",color:"#087bfa"},
-{name:"RUTUBE",url:"https://rutube.ru/channel/68047778",short:"RU",color:"#19213a"},
-{name:"YouTube",url:"https://youtube.com/@nanobots_mult",short:"▶",color:"#e92835"},
-{name:"Telegram",url:"https://t.me/nanobots_mult",short:"TG",color:"#168ebc"},
-{name:"TikTok",url:"https://www.tiktok.com/@nanobots_mult1",short:"TK",color:"#182344"},
-{name:"Likee",url:"https://l.likee.video/p/8qpTgD",short:"L",color:"#d43b80"},
-{name:"Instagram",url:"https://www.instagram.com/nanobots_mult",short:"IG",color:"#b52f7f"},
-{name:"MAX",url:"https://max.ru/channel_id5040174570_biz",short:"M",color:"#5751df"}];
+{name:"VK Видео",icon:"/art/social/vk.svg",url:"https://vk.ru/nanobotsmult",short:"VK",color:"#087bfa"},
+{name:"RUTUBE",icon:"/art/social/rutube.svg",url:"https://rutube.ru/channel/68047778",short:"RU",color:"#19213a"},
+{name:"YouTube",icon:"/art/social/youtube.svg",url:"https://youtube.com/@nanobots_mult",short:"▶",color:"#e92835"},
+{name:"Telegram",icon:"/art/social/telegram.svg",url:"https://t.me/nanobots_mult",short:"TG",color:"#168ebc"},
+{name:"TikTok",icon:"/art/social/tiktok.svg",url:"https://www.tiktok.com/@nanobots_mult1",short:"TK",color:"#182344"},
+{name:"Likee",icon:"/art/social/likee.png",url:"https://l.likee.video/p/8qpTgD",short:"L",color:"#d43b80"},
+{name:"Instagram",icon:"/art/social/instagram.svg",url:"https://www.instagram.com/nanobots_mult",short:"IG",color:"#b52f7f"},
+{name:"MAX",icon:"/art/social/max.svg",url:"https://max.ru/channel_id5040174570_biz",short:"M",color:"#5751df"}];
 export const characters=[
 {name:"Вектор",key:"vector",role:"Лидер и аналитик",text:"Собирает команду и помогает разобраться в самых сложных задачах.",color:"#078d85",box:[1333,1536,63,123,262,571]},
 {name:"Эндо",key:"endo",role:"Смелый исследователь",text:"Первым отправляется навстречу приключениям и всегда готов помочь друзьям.",color:"#008cc9",box:[1536,1345,37,100,337,505]},

@@ -1,0 +1,22 @@
+Social icon assets for Nanobots footer
+Source: Simple Icons canonical repository, develop branch; retrieved 2026-10-09.
+Repository: https://github.com/simple-icons/simple-icons
+The -white.svg variants only add fill="#ffffff" to the source SVG. Geometry unchanged.
+Button backgrounds suggested: YouTube #ff0033; Telegram #26a5e4; TikTok #111111; Instagram gradient; VK #0077ff.
+
+youtube: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/youtube.svg
+telegram: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/telegram.svg
+tiktok: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/tiktok.svg
+instagram: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/instagram.svg
+vk: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vk.svg
+RUTUBE: official brandbook https://rutube.ru/brand/
+Original archive: https://static.rutube.ru/static/zip/rutube_logo.zip
+Asset: Icon_RUTUBE_dark_color_square.svg (unchanged)
+
+MAX: official brandbook https://go.max.ru/brandbook
+Original archive: https://st.max.ru/brandbook/max-colored.zip
+Asset: colored logo SVG (unchanged)
+
+Likee: official website CDN
+https://static-web.likeevideo.com/as/likee-static/likee_logo/asia_live_7h3_M08_10_27_LvsbAFzotR_Efe39AAAAAK87m_w943.png
+Asset: 200x200 transparent PNG (unchanged)
