@@ -10,3 +10,11 @@ https://xn--80aa3ak5a.xn--p1ai/front/main/src/assets/img/logo/minobrnauki-logo-v
 
 4meds: оригинальный PNG, извлечённый без изменений из SVG официального сайта https://4meds.ru/.
 https://static.tildacdn.com/tild6564-6431-4735-b533-383166623764/logo_4meds_full_3.svg
+
+Национальные приоритеты: исходный SVG шапки официального сайта (чёрная надпись, синяя диагональ), без изменений.
+https://www.xn--80aapamcavoccigmpc9ab4d0fkj.xn--p1ai/
+
+ИРИ — Институт развития интернета: оригинальный чёрный SVG, без изменений.
+Копия на Wikimedia Commons, где автором указан АНО «Институт развития интернета», источником — ири.рф:
+https://commons.wikimedia.org/wiki/File:IRI_logo.svg
+https://upload.wikimedia.org/wikipedia/commons/5/51/IRI_logo.svg
