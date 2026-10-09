@@ -1,6 +1,6 @@
 export type Entry={id:string;kind:"episode"|"news";title:string;summary:string;body:string;cover:string;video_url:string;published:number;date:string;revision:number};
 export const socials=[
-{name:"VK Видео",icon:"/art/social/vk.svg",url:"https://vk.ru/nanobotsmult",short:"VK",color:"#087bfa"},
+{name:"VK Видео",icon:"/art/social/vk-white.svg",url:"https://vk.ru/nanobotsmult",short:"VK",color:"#087bfa"},
 {name:"RUTUBE",icon:"/art/social/rutube.svg",url:"https://rutube.ru/channel/68047778",short:"RU",color:"#19213a"},
 {name:"YouTube",icon:"/art/social/youtube.svg",url:"https://youtube.com/@nanobots_mult",short:"▶",color:"#e92835"},
 {name:"Telegram",icon:"/art/social/telegram.svg",url:"https://t.me/nanobots_mult",short:"TG",color:"#168ebc"},

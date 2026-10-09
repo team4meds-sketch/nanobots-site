@@ -20,3 +20,5 @@ Asset: colored logo SVG (unchanged)
 Likee: official website CDN
 https://static-web.likeevideo.com/as/likee-static/likee_logo/asia_live_7h3_M08_10_27_LvsbAFzotR_Efe39AAAAAK87m_w943.png
 Asset: 200x200 transparent PNG (unchanged)
+
+VK white lettering variant (vk-white.svg): preserved the VK glyph subpath from the above Simple Icons source; omitted the surrounding tile, retained original glyph coordinates, white fill. The blue button supplies the background.

@@ -188,7 +188,7 @@
 .social-button[data-social="▶"]{background:#ff0033}
 .social-button[data-social="TG"]{background:#229ed9}
 .social-button[data-social="TK"]{background:#101014}
-.social-grid .social-button[data-social="L"]{background:#fff9e9;padding:7px}
+.social-grid .social-button[data-social="L"]{background:#000;padding:7px}
 .social-button[data-social="L"] img{width:44px;height:44px}
 .social-button[data-social="IG"]{background:linear-gradient(35deg,#f9ce34,#ee2a7b 50%,#6228d7)}
 .social-button[data-social="M"]{background:#fff9e9}
