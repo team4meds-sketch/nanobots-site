@@ -160,3 +160,15 @@
 .media-kit-press .text-link{border:0;background:none;padding:8px 0;font-size:14px;white-space:nowrap;text-decoration:underline}
 .media-kit-contact button:focus-visible{outline-color:#65e3ff}
 @media(max-width:760px){.media-kit-press{flex-wrap:wrap}.media-kit-press p{flex:1;min-width:180px}.partner-dialog{padding:24px 18px!important}.partner-dialog [data-slot=dialog-title]{font-size:26px}.partner-field-pair{grid-template-columns:1fr}}
+
+/* Official project and producer marks keep their original colors and proportions. */
+.footer-logos{max-width:1200px;margin:38px auto 0;padding:32px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;gap:28px;border-top:1px solid #ffffff30}
+.footer-organization{display:flex;align-items:center;justify-content:center;min-width:0;min-height:44px;border-radius:12px}
+.footer-organization:focus-visible{outline:3px solid #65e3ff;outline-offset:8px}
+.footer-organization img{display:block;height:auto;object-fit:contain;max-width:100%}
+.footer-science-decade img{width:228px}
+.footer-ministry img{width:128px}
+.footer-producer{flex-direction:column;gap:12px;font-size:13px;color:#c9d9e5}
+.footer-producer-logo{display:flex;align-items:center;justify-content:center;width:206px;max-width:100%;padding:14px 18px;background:#fff9e9;border-radius:16px}
+.footer-producer-logo img{width:170px}
+@media(max-width:760px){.footer-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px;margin-top:30px;padding:28px 0}.footer-science-decade img{width:190px}.footer-ministry img{width:104px}.footer-producer{grid-column:1/-1}.footer-producer-logo{width:184px;padding:12px 16px}}

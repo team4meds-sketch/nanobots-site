@@ -1,0 +1,12 @@
+Логотипы для сайта Наноботы. Получены 09.10.2026.
+
+Десятилетие науки и технологий: официальный PNG для тёмного фона (без изменений).
+Страница: https://наука.рф/brandstyle/
+Архив: https://xn--80aa3ak5a.xn--p1ai/upload/documents/brandstyle/Logo_PNG.zip
+Файл: Лого_10лет_НиТ_Рус_Контур_белый.png
+
+Минобрнауки России: исходный белый вертикальный SVG с официального портала Десятилетия.
+https://xn--80aa3ak5a.xn--p1ai/front/main/src/assets/img/logo/minobrnauki-logo-vert.svg
+
+4meds: оригинальный PNG, извлечённый без изменений из SVG официального сайта https://4meds.ru/.
+https://static.tildacdn.com/tild6564-6431-4735-b533-383166623764/logo_4meds_full_3.svg
