@@ -161,22 +161,22 @@
 .media-kit-contact button:focus-visible{outline-color:#65e3ff}
 @media(max-width:760px){.media-kit-press{flex-wrap:wrap}.media-kit-press p{flex:1;min-width:180px}.partner-dialog{padding:24px 18px!important}.partner-dialog [data-slot=dialog-title]{font-size:26px}.partner-field-pair{grid-template-columns:1fr}}
 
-/* Official project and producer marks keep their original colors and proportions. */
+/* Monochrome partner marks preserve the original geometry and transparency. */
 .footer-logos{max-width:1200px;margin:38px auto 0;padding:32px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:center;gap:28px;border-top:1px solid #ffffff30}
 .footer-organization{display:flex;align-items:center;justify-content:center;min-width:0;min-height:44px;border-radius:12px}
 .footer-organization:focus-visible{outline:3px solid #65e3ff;outline-offset:8px}
-.footer-organization img{display:block;height:auto;object-fit:contain;max-width:100%}
+.footer-organization img{display:block;height:auto;object-fit:contain;max-width:100%;filter:brightness(0) invert(1)}
 .footer-science-decade img{width:228px}
 .footer-ministry img{width:128px}
-.footer-partner-logo{display:flex;align-items:center;justify-content:center;max-width:100%;padding:18px 16px;background:#fff9e9;border-radius:16px}
+.footer-partner-logo{display:flex;align-items:center;justify-content:center;max-width:100%;padding:0;background:transparent}
 .footer-national-priorities .footer-partner-logo{width:240px}
 .footer-national-priorities img{width:208px}
 .footer-iri .footer-partner-logo{width:190px}
 .footer-iri img{width:156px}
 .footer-producer{flex-direction:column;gap:12px;font-size:13px;color:#c9d9e5}
-.footer-producer-logo{display:flex;align-items:center;justify-content:center;width:206px;max-width:100%;padding:14px 18px;background:#fff9e9;border-radius:16px}
+.footer-producer-logo{display:flex;align-items:center;justify-content:center;width:206px;max-width:100%;padding:0;background:transparent}
 .footer-producer-logo img{width:170px}
-@media(max-width:1000px){.footer-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px;margin-top:30px;padding:28px 0}.footer-science-decade img{width:190px}.footer-ministry img{width:104px}.footer-national-priorities,.footer-iri,.footer-producer{grid-column:1/-1}.footer-producer-logo{width:184px;padding:12px 16px}}
+@media(max-width:1000px){.footer-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px;margin-top:30px;padding:28px 0}.footer-science-decade img{width:190px}.footer-ministry img{width:104px}.footer-national-priorities,.footer-iri,.footer-producer{grid-column:1/-1}.footer-producer-logo{width:184px}}
 
 /* Social logo buttons */
 .social-grid{grid-template-columns:repeat(4,60px);gap:14px;width:max-content;max-width:100%}
@@ -199,3 +199,9 @@
 .social-button:active{transform:translateY(2px);box-shadow:0 2px 0 #0e1730}
 @media(max-width:380px){.social-grid{grid-template-columns:repeat(4,54px);gap:12px}.social-grid .social-button{width:54px;height:54px;padding:10px;border-radius:16px}}
 @media(prefers-reduced-motion:reduce){.social-grid .social-button{transition:none}}
+
+/* The watch shortcuts use the same brand artwork as the social buttons. */
+.watch-platforms a>.platform-icon{flex:0 0 34px;width:34px;height:34px}
+.platform-icon img{display:block;width:23px;height:23px;object-fit:contain}
+.platform-icon[data-social="RU"] img{width:100%;height:100%;border-radius:inherit}
+@media(max-width:760px){.watch-platforms a>.platform-icon{flex-basis:30px;width:30px;height:30px}.platform-icon img{width:21px;height:21px}}
