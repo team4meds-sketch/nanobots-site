@@ -152,3 +152,31 @@ $('[data-copy-email]').addEventListener('click', async () => {
   try { await navigator.clipboard.writeText('valikova@4meds.ru'); showToast('Почта скопирована'); }
   catch { showToast('Почта для связи: valikova@4meds.ru'); }
 });
+
+// Each side keeps its natural height; the hidden side cannot receive focus.
+document.querySelectorAll('[data-character]').forEach(card => {
+  const front = card.querySelector('.character-front');
+  const back = card.querySelector('.character-back');
+  const open = card.querySelector('.character-open');
+  const close = card.querySelector('.character-close');
+  const title = back.querySelector('h3');
+  function flip(showDetails) {
+    card.classList.toggle('is-flipped', showDetails);
+    open.setAttribute('aria-expanded', String(showDetails));
+    const activeSide = showDetails ? back : front;
+    const inactiveSide = showDetails ? front : back;
+    activeSide.inert = false;
+    activeSide.removeAttribute('aria-hidden');
+    (showDetails ? title : open).focus({ preventScroll: true });
+    inactiveSide.inert = true;
+    inactiveSide.setAttribute('aria-hidden', 'true');
+  }
+  open.addEventListener('click', () => flip(true));
+  close.addEventListener('click', () => flip(false));
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && card.classList.contains('is-flipped')) {
+      event.preventDefault();
+      flip(false);
+    }
+  });
+});

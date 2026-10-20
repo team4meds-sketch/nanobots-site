@@ -10,6 +10,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="three-d.css">
+  <link rel="stylesheet" href="characters.css">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -125,14 +126,146 @@
     </section>
 
     <section class="section wrap heroes-section" id="heroes" aria-labelledby="heroes-title">
-      <div class="heading-row"><div><p class="eyebrow"><span class="section-index">04</span> Герои и визуальный мир</p><h2 id="heroes-title">Пять характеров.<br><span class="coral">Одна команда.</span></h2></div><p class="heading-aside">Знакомые характеры в новом 3D-мире.<br> Для историй, открытий и совместных продуктов.</p></div>
+      <div class="heading-row"><div><p class="eyebrow"><span class="section-index">04</span> Герои и визуальный мир</p><h2 id="heroes-title">Пять характеров.<br><span class="coral">Одна команда.</span></h2></div><p class="heading-aside">Крошечные роботы, созданные Петром,<br>исследуют и защищают его организм.<br><span class="heroes-instruction">Нажмите на героя, чтобы узнать его историю.</span></p></div>
       <div class="hero-cards">
-        <article class="character-card card-vector"><span class="character-number">01 /</span><svg viewBox="0 105 300 680" role="img" aria-label="Вектор — новый 3D-дизайн" preserveAspectRatio="xMidYMax meet"><defs><clipPath id="clip-0"><rect x="0" y="105" width="300" height="680"/></clipPath></defs><image href="assets/team-3d.webp" width="1672" height="941" clip-path="url(#clip-0)"/></svg><h3>Вектор</h3><p>Лидер и аналитик</p></article>
-        <article class="character-card card-endo"><span class="character-number">02 /</span><svg viewBox="300 330 300 455" role="img" aria-label="Эндо — новый 3D-дизайн" preserveAspectRatio="xMidYMax meet"><defs><clipPath id="clip-300"><rect x="300" y="330" width="300" height="455"/></clipPath></defs><image href="assets/team-3d.webp" width="1672" height="941" clip-path="url(#clip-300)"/></svg><h3>Эндо</h3><p>Смелый исследователь</p></article>
-        <article class="character-card card-mikra"><span class="character-number">03 /</span><svg viewBox="600 155 330 630" role="img" aria-label="Микра — новый 3D-дизайн" preserveAspectRatio="xMidYMax meet"><defs><clipPath id="clip-600"><rect x="600" y="155" width="330" height="630"/></clipPath></defs><image href="assets/team-3d.webp" width="1672" height="941" clip-path="url(#clip-600)"/></svg><h3>Микра</h3><p>Изобретатель и техник</p></article>
-        <article class="character-card card-luksi"><span class="character-number">04 /</span><svg viewBox="920 330 255 455" role="img" aria-label="Люкси — новый 3D-дизайн" preserveAspectRatio="xMidYMax meet"><defs><clipPath id="clip-920"><rect x="920" y="330" width="255" height="455"/></clipPath></defs><image href="assets/team-3d.webp" width="1672" height="941" clip-path="url(#clip-920)"/></svg><h3>Люкси</h3><p>Любопытная и находчивая</p></article>
-        <article class="character-card card-omni"><span class="character-number">05 /</span><svg viewBox="1180 190 490 595" role="img" aria-label="Омни — новый 3D-дизайн" preserveAspectRatio="xMidYMax meet"><defs><clipPath id="clip-1180"><rect x="1180" y="190" width="490" height="595"/></clipPath></defs><image href="assets/team-3d.webp" width="1672" height="941" clip-path="url(#clip-1180)"/></svg><h3>Омни</h3><p>Сильный и добрый защитник</p></article>
+        <article class="character-card card-vector" data-character="vector" aria-label="Вектор">
+          <div class="character-inner">
+            <div class="character-face character-front">
+              <span class="character-number">01 /</span>
+              <div class="character-portrait"><img src="assets/characters/vector.webp" alt="Вектор — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
+              <h3>Вектор</h3>
+              <p class="character-role">Терапевт · Диагност</p>
+              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
+              <button class="character-open" type="button" aria-label="Познакомиться: Вектор" aria-expanded="false" aria-controls="vector-details"></button>
+            </div>
+            <div class="character-face character-back" id="vector-details" aria-hidden="true" inert>
+              <div class="character-back-heading"><span class="character-number">01 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
+              <h3 id="vector-details-title" tabindex="-1">Вектор</h3>
+              <p class="character-role">Терапевт · Диагност</p>
+              <p class="character-story">Капитан корабля и мозг команды. Вектор знает ответы на тысячи вопросов, верит в логику и действует по инструкции. Иногда уверенность превращается в упрямство: ему непросто принять решение «не по правилам». Он учится отпускать контроль и доверять друзьям.</p>
+              <h4>Роль в команде</h4>
+              <p>Анализирует симптомы, ставит диагноз и координирует команду во время миссий.</p>
+              <h4>Суперспособности</h4>
+              <ul class="character-powers">
+                  <li><strong>Энциклопедический поиск</strong> — мгновенно находит нужные знания в планшете.</li>
+                  <li><strong>3D-навигация</strong> — видит карту организма Петра, маршруты и опасные зоны.</li>
+                  <li><strong>Голографический проектор</strong> — показывает команде изображения и записи.</li>
+              </ul>
+              <button class="character-close" type="button" aria-label="Вернуться к портрету: Вектор"><span aria-hidden="true">↶</span> К портрету</button>
+            </div>
+          </div>
+        </article>
+        <article class="character-card card-endo" data-character="endo" aria-label="Эндо">
+          <div class="character-inner">
+            <div class="character-face character-front">
+              <span class="character-number">02 /</span>
+              <div class="character-portrait"><img src="assets/characters/endo.webp" alt="Эндо — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
+              <h3>Эндо</h3>
+              <p class="character-role">Хирург</p>
+              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
+              <button class="character-open" type="button" aria-label="Познакомиться: Эндо" aria-expanded="false" aria-controls="endo-details"></button>
+            </div>
+            <div class="character-face character-back" id="endo-details" aria-hidden="true" inert>
+              <div class="character-back-heading"><span class="character-number">02 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
+              <h3 id="endo-details-title" tabindex="-1">Эндо</h3>
+              <p class="character-role">Хирург</p>
+              <p class="character-story">Дерзкий, импульсивный второй пилот. Эндо первым бросается в приключение, а обдумывает риск уже потом. Смелость порой заводит его в беду, зато он вдохновляет друзей не сдаваться. Спорит с Вектором, но всегда готов его защитить. Учится слушать других и ценить взаимопомощь.</p>
+              <h4>Роль в команде</h4>
+              <p>Защищает команду. С помощью бластера режет, сшивает и прижигает.</p>
+              <h4>Суперспособности</h4>
+              <ul class="character-powers">
+                  <li><strong>Многофункциональный бластер</strong> — импульс отпугивает врагов, клеевой луч фиксирует объекты, разрезатель открывает проходы.</li>
+                  <li><strong>Силовое поле</strong> — ненадолго создаёт защитный барьер.</li>
+                  <li><strong>Турборывок</strong> — колёсики в ступнях помогают резко ускориться и преодолеть преграду.</li>
+              </ul>
+              <button class="character-close" type="button" aria-label="Вернуться к портрету: Эндо"><span aria-hidden="true">↶</span> К портрету</button>
+            </div>
+          </div>
+        </article>
+        <article class="character-card card-mikra" data-character="mikra" aria-label="Микра">
+          <div class="character-inner">
+            <div class="character-face character-front">
+              <span class="character-number">03 /</span>
+              <div class="character-portrait"><img src="assets/characters/mikra.webp" alt="Микра — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
+              <h3>Микра</h3>
+              <p class="character-role">Биолог · Биохимик</p>
+              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
+              <button class="character-open" type="button" aria-label="Познакомиться: Микра" aria-expanded="false" aria-controls="mikra-details"></button>
+            </div>
+            <div class="character-face character-back" id="mikra-details" aria-hidden="true" inert>
+              <div class="character-back-heading"><span class="character-number">03 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
+              <h3 id="mikra-details-title" tabindex="-1">Микра</h3>
+              <p class="character-role">Биолог · Биохимик</p>
+              <p class="character-story">Осторожная исследовательница, которая замечает то, что упускают остальные. Микра боится микробов, темноты и даже собственной тени, но её внимание к деталям часто спасает команду. С каждой миссией она становится смелее, учится доверять интуиции и действовать первой.</p>
+              <h4>Роль в команде</h4>
+              <p>Берёт пробы, измеряет концентрации веществ, изучает «жителей» организма Петра и проверяет, всё ли в порядке.</p>
+              <h4>Суперспособности</h4>
+              <ul class="character-powers">
+                  <li><strong>Биосканер</strong> — анализирует кровь, лимфу и слюну.</li>
+                  <li><strong>Нюховой сенсор</strong> — улавливает мельчайшие изменения среды.</li>
+                  <li><strong>Биоимпульс</strong> — успокаивает клетки или активирует их работу.</li>
+                  <li><strong>Обострённая бдительность</strong> — позволяет заметить скрытые угрозы.</li>
+              </ul>
+              <button class="character-close" type="button" aria-label="Вернуться к портрету: Микра"><span aria-hidden="true">↶</span> К портрету</button>
+            </div>
+          </div>
+        </article>
+        <article class="character-card card-luksi" data-character="luksi" aria-label="Люкси">
+          <div class="character-inner">
+            <div class="character-face character-front">
+              <span class="character-number">04 /</span>
+              <div class="character-portrait"><img src="assets/characters/luksi.webp" alt="Люкси — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
+              <h3>Люкси</h3>
+              <p class="character-role">Репортёр · Лучевая диагностика</p>
+              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
+              <button class="character-open" type="button" aria-label="Познакомиться: Люкси" aria-expanded="false" aria-controls="luksi-details"></button>
+            </div>
+            <div class="character-face character-back" id="luksi-details" aria-hidden="true" inert>
+              <div class="character-back-heading"><span class="character-number">04 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
+              <h3 id="luksi-details-title" tabindex="-1">Люкси</h3>
+              <p class="character-role">Репортёр · Лучевая диагностика</p>
+              <p class="character-story">Энергичная репортёрша: всегда на связи, всё фиксирует и обо всём расспрашивает. Для Люкси каждое приключение — новость. Она любит внимание и порой перебивает друзей, спеша поделиться находкой. Учится слушать команду, разделять ответственность и направлять любопытство на общее дело.</p>
+              <h4>Роль в команде</h4>
+              <p>Ведёт хронику миссий, берёт интервью у клеток и готовит визуальные отчёты. Просвечивает ткани и органы, обнаруживая скрытые процессы.</p>
+              <h4>Суперспособности</h4>
+              <ul class="character-powers">
+                  <li><strong>Прожектор и вспышка</strong> — освещает тёмные зоны и ненадолго останавливает врагов.</li>
+                  <li><strong>Дрон-камера</strong> — снимает в труднодоступных местах.</li>
+                  <li><strong>Мгновенный повтор</strong> — воспроизводит события из своего архива.</li>
+              </ul>
+              <button class="character-close" type="button" aria-label="Вернуться к портрету: Люкси"><span aria-hidden="true">↶</span> К портрету</button>
+            </div>
+          </div>
+        </article>
+        <article class="character-card card-omni" data-character="omni" aria-label="Омни">
+          <div class="character-inner">
+            <div class="character-face character-front">
+              <span class="character-number">05 /</span>
+              <div class="character-portrait"><img src="assets/characters/omni.webp" alt="Омни — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
+              <h3>Омни</h3>
+              <p class="character-role">Поддержка · Логистика</p>
+              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
+              <button class="character-open" type="button" aria-label="Познакомиться: Омни" aria-expanded="false" aria-controls="omni-details"></button>
+            </div>
+            <div class="character-face character-back" id="omni-details" aria-hidden="true" inert>
+              <div class="character-back-heading"><span class="character-number">05 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
+              <h3 id="omni-details-title" tabindex="-1">Омни</h3>
+              <p class="character-role">Поддержка · Логистика</p>
+              <p class="character-story">Надёжный и заботливый помощник — настоящее сердце команды. Омни чинит, подзаряжает и подстраховывает друзей. Он добрый, чуткий и иногда слишком осторожный, но рядом с ним всем спокойно. Говорит мало; если уж заговорил — стоит прислушаться.</p>
+              <h4>Роль в команде</h4>
+              <p>Ремонтирует наноботов после миссий, восстанавливает их энергию, перевозит оборудование и помогает с тяжёлой работой.</p>
+              <h4>Суперспособности</h4>
+              <ul class="character-powers">
+                  <li><strong>Руки-силовики</strong> — вытягиваются и превращаются в захваты, щиты или тиски.</li>
+                  <li><strong>Энергопередача</strong> — экстренно подзаряжает товарищей.</li>
+                  <li><strong>Рюкзак поддержки</strong> — хранит запасные части и микродевайсы для ремонта.</li>
+              </ul>
+              <button class="character-close" type="button" aria-label="Вернуться к портрету: Омни"><span aria-hidden="true">↶</span> К портрету</button>
+            </div>
+          </div>
+        </article>
       </div>
+      <p class="heroes-team-note">У каждого — своя специальность. Их общая сила — дружба, взаимопомощь и доверие.</p>
     </section>
 
     <section class="formats-section" id="formats" aria-labelledby="formats-title">

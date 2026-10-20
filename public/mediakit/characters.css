@@ -1,0 +1,149 @@
+/* Independent portraits and accessible, content-sized character flip cards. */
+.hero-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+.character-card,
+.character-card.card-omni {
+  --character-color: #087f87;
+  --character-tint: #eef7f5;
+  display: block;
+  grid-column: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+  box-shadow: none;
+  perspective: 1600px;
+  min-width: 0;
+}
+.character-card:hover { transform: none; }
+.card-endo { --character-color: #077abb; --character-tint: #edf5fc; }
+.card-mikra { --character-color: #bd285c; --character-tint: #fff0f4; }
+.card-luksi { --character-color: #7950aa; --character-tint: #f4effb; }
+.character-card.card-omni { --character-color: #90641b; --character-tint: #fcf5e5; }
+.character-inner {
+  display: grid;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .65s cubic-bezier(.2,.7,.25,1);
+}
+.character-card.is-flipped .character-inner { transform: rotateY(180deg); }
+.character-face {
+  grid-area: 1 / 1;
+  min-width: 0;
+  padding: 27px;
+  border-radius: 28px;
+  border: 1px solid #e2e6e8;
+  background: var(--character-tint);
+  box-shadow: inset 0 2px 2px #fff, 0 10px 24px -20px #192d4840;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.character-front {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+}
+.character-portrait {
+  display: grid;
+  place-items: end center;
+  flex: 1;
+  min-height: 350px;
+  margin: 14px -8px 20px;
+}
+.character-portrait img {
+  display: block;
+  width: 100%;
+  height: 440px;
+  max-height: 100%;
+  object-fit: contain;
+}
+.card-endo .character-portrait img,
+.card-luksi .character-portrait img { height: 390px; }
+.card-omni .character-portrait img { height: 410px; }
+.character-card .character-number { color: #667587; font-size: 11px; letter-spacing: .04em; }
+.character-card h3 { font-size: 34px; line-height: 1.1; margin: 0 0 10px; color: var(--character-color); }
+.character-card p { font-size: 14px; line-height: 1.55; color: #35455a; margin: 0; }
+.character-card .character-role { font-size: 12px; line-height: 1.5; color: #5b6878; }
+.flip-hint {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding-top: 16px;
+  border-top: 1px solid #192d481a;
+  color: var(--character-color);
+  font-size: 12px;
+  font-weight: 600;
+}
+.flip-hint span { font-size: 22px; line-height: 1; }
+.character-open {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.character-open:hover { box-shadow: inset 0 0 0 2px var(--character-color); }
+.character-open:focus-visible,
+.character-close:focus-visible { outline: 3px solid var(--character-color); outline-offset: 5px; }
+.character-back {
+  display: flex;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.character-back-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 21px; }
+.character-mark { color: var(--character-color); font-size: 24px; line-height: 1; }
+.character-back h3:focus { outline: none; }
+.character-card .character-story { margin-top: 21px; }
+.character-back h4 { font-size: 11px; text-transform: uppercase; letter-spacing: .085em; color: var(--character-color); margin: 21px 0 9px; }
+.character-powers { list-style: none; padding: 0; margin: 0 0 26px; color: #35455a; }
+.character-powers li { font-size: 13px; line-height: 1.55; margin-top: 10px; }
+.character-powers li:first-child { margin-top: 0; }
+.character-powers strong { font-weight: 650; }
+.character-close {
+  align-self: flex-start;
+  margin-top: auto;
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 15px;
+  border: 1px solid #192d4828;
+  border-radius: 30px;
+  background: #ffffffa8;
+  color: var(--character-color);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.character-close:hover { background: #fff; border-color: var(--character-color); }
+.character-close span { font-size: 21px; line-height: 1; }
+.heroes-instruction { display: block; font-size: 12px; margin-top: 13px; color: var(--ink); }
+.heroes-team-note { margin: 25px 0 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+@media (max-width: 1000px) {
+  .hero-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+}
+@media (max-width: 600px) {
+  .hero-cards { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .character-face { padding: 25px; border-radius: 25px; }
+  .character-front { min-height: 620px; }
+  .character-portrait img { height: 360px; }
+  .card-endo .character-portrait img,
+  .card-luksi .character-portrait img { height: 320px; }
+  .card-omni .character-portrait img { height: 340px; }
+  .character-card p { font-size: 15px; line-height: 1.6; }
+  .character-card .character-role { font-size: 13px; }
+  .character-powers li { font-size: 14px; line-height: 1.6; }
+  .character-card h3 { font-size: 34px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .character-inner { transition: none; }
+}
