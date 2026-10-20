@@ -1,0 +1,108 @@
+.partners-section {
+  padding-top: 0;
+  padding-bottom: 88px;
+}
+.partners-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.partners-heading h2 { margin: 0; }
+.partners-heading > p {
+  margin: 0 0 6px;
+  max-width: 230px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.partner-grid > li { min-width: 0; }
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 22px 20px 18px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 8px 20px -18px #192d4860;
+  transition: transform .2s, box-shadow .2s;
+}
+.partner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -16px #192d4860;
+}
+.partner-card:focus-visible {
+  outline: 3px solid #087eb9;
+  outline-offset: 5px;
+}
+.partner-card-dark {
+  background: #1a2f4c;
+  border-color: #1a2f4c;
+  color: #fff;
+}
+.partner-logo {
+  display: grid;
+  place-items: center;
+  height: 136px;
+  margin-bottom: 19px;
+}
+.partner-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+}
+.partner-minobrnauki .partner-logo img { width: 82px; }
+.partner-decade .partner-logo img { max-width: 155px; }
+.partner-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: auto;
+  min-height: 42px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.partner-caption > span:last-child {
+  font-size: 20px;
+  line-height: 1;
+  opacity: .65;
+}
+@media (max-width: 1000px) {
+  .partner-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .partner-grid > li { grid-column: span 2; }
+  .partner-grid > li:nth-child(4) { grid-column: 2 / span 2; }
+}
+@media (max-width: 640px) {
+  .partners-section { padding-bottom: 48px; }
+  .partners-heading { display: block; margin-bottom: 24px; }
+  .partners-heading > p { max-width: none; margin-top: 14px; font-size: 13px; }
+  .partner-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .partner-grid > li,
+  .partner-grid > li:nth-child(4) { grid-column: auto; }
+  .partner-grid > li:last-child { grid-column: 1 / -1; }
+  .partner-card { padding: 18px 16px 16px; border-radius: 18px; }
+  .partner-logo { height: 112px; margin-bottom: 15px; }
+  .partner-logo img { max-height: 104px; max-width: 200px; }
+  .partner-minobrnauki .partner-logo img { width: 75px; }
+  .partner-caption { font-size: 11px; min-height: 36px; }
+  .partner-priorities .partner-logo { height: 70px; margin-bottom: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .partner-card { transition: none; }
+  .partner-card:hover { transform: none; }
+}

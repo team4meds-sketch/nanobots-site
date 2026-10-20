@@ -1,0 +1,8 @@
+Partner logos for nanoboti.ru/mediakit. Retrieved 2026-10-20.
+IRI, Ministry of Science and Higher Education, Decade of Science and Technology,
+National Priorities: unchanged SVGs from the existing nanoboti.ru website repository.
+See public/art/organizations/SOURCES.txt for original provenance.
+NAUKA 0+: unchanged white SVG from the official festival website:
+https://festivalnauki.ru/images/logo.svg
+Official media materials: https://festivalnauki.ru/media/downloadmaterials/
+All five logos retain their original artwork, proportions and colours.
