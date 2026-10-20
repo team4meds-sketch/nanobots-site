@@ -176,3 +176,34 @@ body { background: var(--paper); }
 }
 
 .character-card svg{mix-blend-mode:normal}
+
+/* Updated reach and a plain-language family audience card. */
+.metric-age .metric-family { font-size: 32px; line-height: 1.2; letter-spacing: -.025em; margin-top: 31px; }
+.metric-age .metric-family span { display: block; position: static; top: auto; margin: 0; font: inherit; vertical-align: baseline; }
+.metric-age .metric-family .metric-age-range { white-space: nowrap; }
+.metric-age .metric-family .metric-parent-label { font-size: 21px; font-weight: 600; margin-top: 10px; }
+@media(max-width:1150px) {
+  .metric-age .metric-family { font-size: 28px; }
+  .metric-age .metric-family .metric-parent-label { font-size: 18px; }
+  .metric-followers strong { font-size: 70px; }
+  .metric-followers small { font-size: 26px; }
+}
+@media(max-width:640px) {
+  .metric-followers strong { font-size: 48px; }
+  .metric-followers small { font-size: 19px; margin-left: 5px; }
+  .metric-age .metric-family { font-size: 25px; margin-top: 24px; }
+  .metric-age .metric-family .metric-parent-label { font-size: 17px; line-height: 1.3; margin-top: 9px; }
+}
+@media(max-width:370px) {
+  .metric-followers strong { font-size: 44px; }
+  .metric-followers small { font-size: 17px; }
+  .metric-age .metric-family { font-size: 23px; }
+}
+
+/* Eight channel cards keep equal spacing on every screen. */
+.channel-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+@media(max-width:640px) {
+  .channel-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .channel-telegram { grid-column: auto; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .channel-telegram .channel-action { margin-left: 0; width: 100%; gap: 4px; }
+}
