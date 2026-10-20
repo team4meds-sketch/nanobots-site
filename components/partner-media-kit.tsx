@@ -6,7 +6,7 @@ import PartnerContactForm from "@/components/partner-contact-form";
 import {ArrowUpRight,BookOpen,Film,Users} from "lucide-react";
 import {socials} from "@/lib/content";
 
-// Source: Pitch_21.09_v01.pptx, supplied by the project team (September 2026).
+// Source: project owner update, totals as of the end of September 2026.
 // These presentation totals cover all platforms, unlike the live API statistics.
 const formats = [
   {icon:Film,title:"Интеграции в контент",action:"Хочу сотрудничать",text:"Нативные упоминания, продакт-плейсмент и брендированные спецвыпуски с медицинской валидацией."},
@@ -25,18 +25,19 @@ export default function PartnerMediaKit(){
           <p>«Наноботы» — анимационная вселенная о теле и здоровье от студии ООО «4МЕДС». Объясняем сложное через юмор, приключения и любимых героев.</p>
         </div>
         <dl className="media-kit-facts">
-          <div><dt>Для кого</dt><dd>Дети 6–12 лет и их родители<span>Ядро аудитории · семейный просмотр</span></dd></div>
+          <div><dt>Для кого</dt><dd>Дети 6–14 лет и их родители<span>Ядро аудитории · семейный просмотр</span></dd></div>
           <div><dt>Формат</dt><dd>Вертикальные ролики 30–60 секунд<span>Анимационный сериал — в разработке</span></dd></div>
           <div><dt>Подход</dt><dd>Наука, которой можно доверять<span>Медицинская и научная валидация сюжетов</span></dd></div>
         </dl>
       </div>
 
       <div className="media-kit-reach" aria-label="Охваты по данным презентации проекта">
-        <div><strong>50 млн+</strong><span>просмотров контента</span></div>
-        <div><strong>70 000</strong><span>подписчиков на площадках</span></div>
+        <div><strong>60 млн+</strong><span>просмотров контента</span></div>
+        <div><strong>80 000</strong><span>подписчиков на площадках</span></div>
         <div><strong>7</strong><span>онлайн-платформ</span></div>
       </div>
-      <p className="media-kit-source">Совокупные показатели по данным презентации проекта · сентябрь 2026.</p>
+      <p className="media-kit-source">Совокупные показатели по данным команды проекта · на конец сентября 2026.</p>
+      <p style={{margin:"16px 0 24px"}}><a href="./mediakit/" className="text-link">Открыть полный медиакит<ArrowUpRight size={17} aria-hidden="true"/></a></p>
       <div className="media-kit-platforms" aria-label="Площадки проекта">
         {socials.filter(s=>s.name!=="Instagram").map(s=><a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer">{s.name}<ArrowUpRight size={13} aria-hidden="true"/></a>)}
       </div>
