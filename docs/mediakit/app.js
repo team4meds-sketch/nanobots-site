@@ -1,12 +1,5 @@
 'use strict';
 
-// Source: audience analysis supplied by the project team. No aggregated or inferred percentages.
-const audience = {
-  youtube: { name: 'YouTube', female: 55.3, male: 44.6, age: '25–44', description: 'Взрослая аудитория, которой интересны польза и экспертность.', countries: ['Казахстан', 'Россия', 'Украина', 'Кыргызстан', 'Беларусь'] },
-  vk: { name: 'ВКонтакте', female: 45.7, male: 53.7, age: 'до 18', description: 'Молодёжь и подростки. Динамичные истории и открытия в коротком формате.', countries: ['Россия'] },
-  likee: { name: 'Likee', female: 64.6, male: 33.4, age: 'до 18', description: 'Молодёжь и подростки. Развлекательный контент и знакомые герои.', countries: ['Россия'] },
-  tiktok: { name: 'TikTok', female: 41, male: 58, age: '18–34', description: 'Молодая аудитория, которой близки динамика и развлекательный формат.', countries: ['Россия', 'Казахстан', 'Украина', 'Беларусь'] },
-};
 const formatData = {
   content: {
     type: 'Бренд внутри истории', title: 'Станьте частью<br>приключения.',
@@ -38,31 +31,6 @@ const formatData = {
   }
 };
 const $ = (selector) => document.querySelector(selector);
-const percent = (number) => new Intl.NumberFormat('ru-RU', {maximumFractionDigits: 1}).format(number);
-function setPlatform(key) {
-  const data = audience[key];
-  document.querySelectorAll('[data-platform]').forEach(button => {
-    const selected = button.dataset.platform === key;
-    button.setAttribute('aria-selected', String(selected));
-    button.tabIndex = selected ? 0 : -1;
-  });
-  $('#audience-panel').setAttribute('aria-labelledby', `tab-${key}`);
-  $('#platform-label').textContent = data.name;
-  $('#female-value').textContent = `${percent(data.female)}%`;
-  $('#male-value').textContent = `${percent(data.male)}%`;
-  const femaleMajor = data.female >= data.male;
-  $('#gender-major').replaceChildren(document.createTextNode(percent(femaleMajor ? data.female : data.male)));
-  const unit = document.createElement('span'); unit.textContent = '%'; $('#gender-major').append(unit);
-  $('#gender-major-label').textContent = femaleMajor ? 'женщины' : 'мужчины';
-  $('#gender-donut').style.background = `conic-gradient(var(--coral) 0 ${data.female}%, var(--blue) ${data.female}% ${data.female + data.male}%, #e8eaeb ${data.female + data.male}% 100%)`;
-  $('#gender-donut').setAttribute('aria-label', `${data.name}: женщины ${percent(data.female)}%, мужчины ${percent(data.male)}%. Доли из исходной аналитики.`);
-  $('#platform-age').replaceChildren(document.createTextNode(data.age));
-  const years = document.createElement('small'); years.textContent = 'лет'; $('#platform-age').append(years);
-  $('#platform-description').textContent = data.description;
-  $('#platform-countries').replaceChildren(...data.countries.map(country => {
-    const chip = document.createElement('span'); chip.textContent = country; return chip;
-  }));
-}
 function setFormat(key) {
   const data = formatData[key];
   document.querySelectorAll('[data-format]').forEach(button => {
@@ -100,9 +68,8 @@ function bindTabs(selector, callback, attribute, orientation) {
     });
   });
 }
-bindTabs('[data-platform]', setPlatform, 'platform', 'horizontal');
 bindTabs('[data-format]', setFormat, 'format', 'vertical');
-setPlatform('youtube'); setFormat('content');
+setFormat('content');
 
 const menuButton = $('.menu-toggle');
 menuButton.addEventListener('click', () => {

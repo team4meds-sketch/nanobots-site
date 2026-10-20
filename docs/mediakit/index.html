@@ -9,9 +9,10 @@
   <title>НАНОБОТЫ — медиакит для партнёров</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="three-d.css">
+  <link rel="stylesheet" href="three-d.css?v=audience-20261020">
   <link rel="stylesheet" href="characters.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="audience.css?v=audience-20261020">
+  <script src="app.js?v=audience-20261020" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">К содержанию</a>
@@ -86,27 +87,83 @@
         </div>
         <p class="data-note">Просмотры и подписчики — совокупные показатели проекта, по данным команды. Просмотры не равны числу уникальных зрителей.</p>
 
-        <div class="audience-heading"><h3>Кто нас смотрит</h3><p>У каждой площадки — своя аудитория.<br>Выберите канал, чтобы увидеть её портрет.</p></div>
-        <div class="audience-tabs" role="tablist" aria-label="Аудитория по площадкам">
-          <button role="tab" id="tab-youtube" aria-controls="audience-panel" aria-selected="true" data-platform="youtube">YouTube</button>
-          <button role="tab" id="tab-vk" aria-controls="audience-panel" aria-selected="false" tabindex="-1" data-platform="vk">ВКонтакте</button>
-          <button role="tab" id="tab-likee" aria-controls="audience-panel" aria-selected="false" tabindex="-1" data-platform="likee">Likee</button>
-          <button role="tab" id="tab-tiktok" aria-controls="audience-panel" aria-selected="false" tabindex="-1" data-platform="tiktok">TikTok</button>
-        </div>
-        <div class="audience-panel" id="audience-panel" role="tabpanel" aria-labelledby="tab-youtube" tabindex="0">
-          <div class="gender-card">
-            <div class="card-top"><h4>Состав аудитории</h4><span id="platform-label">YouTube</span></div>
-            <div class="gender-layout">
-              <div class="donut" id="gender-donut" role="img" aria-label="YouTube: женщины 55,3%, мужчины 44,6%">
-                <div class="donut-center"><b id="gender-major">55,3<span>%</span></b><span id="gender-major-label">женщины</span></div>
-              </div>
-              <div class="gender-legend"><div><span><i class="female-dot"></i>Женщины</span><b id="female-value">55,3%</b></div><div><span><i class="male-dot"></i>Мужчины</span><b id="male-value">44,6%</b></div></div>
-            </div>
+        <section class="audience-overview" id="audience" aria-labelledby="audience-title">
+          <div class="audience-overview-heading">
+            <div><p class="eyebrow">Одна вселенная — разные зрители</p><h3 id="audience-title">Кто нас смотрит</h3></div>
+            <p class="audience-period"><span class="status-dot" aria-hidden="true"></span> Июль — октябрь 2025</p>
           </div>
-          <div class="age-card"><span class="metric-label">Возраст аудитории площадки</span><strong id="platform-age">25–44<small>лет</small></strong><p id="platform-description">Взрослая аудитория, которой интересны польза и экспертность.</p><span class="age-card-foot">По аналитике канала</span></div>
-          <div class="countries-card"><div class="card-top"><h4>География</h4><span aria-hidden="true">↗</span></div><div id="platform-countries" class="country-chips"><span>Казахстан</span><span>Россия</span><span>Украина</span><span>Кыргызстан</span><span>Беларусь</span></div><p>Страны, указанные в аналитике выбранной площадки.</p></div>
-        </div>
-        <p class="data-note">Источник: анализ аудитории по соцсетям, предоставленный командой проекта. Период среза в документе не указан. Доли сохранены как в источнике; сумма может отличаться от 100%. Возраст аккаунтов на площадках и целевая аудитория мультсериала — разные показатели.</p>
+          <div class="audience-dashboard">
+            <article class="audience-window audience-age-window" aria-labelledby="audience-age-title">
+              <div class="audience-window-bar"><span class="audience-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><h4 id="audience-age-title">Возраст</h4><span class="audience-window-symbol" aria-hidden="true">↗</span></div>
+              <div class="audience-age-body">
+                <p class="audience-window-lead">От школьников<br>до взрослых</p>
+                <div class="audience-age-groups" role="list" aria-label="Возрастные группы без процентных долей">
+                  <div class="audience-age-group tone-blue" role="listitem"><span aria-hidden="true">✳</span><strong>до 18</strong><small>лет</small></div>
+                  <div class="audience-age-group tone-mint" role="listitem"><span aria-hidden="true">↗</span><strong>18–24</strong><small>года</small></div>
+                  <div class="audience-age-group tone-purple" role="listitem"><span aria-hidden="true">✦</span><strong>25–34</strong><small>года</small></div>
+                  <div class="audience-age-group tone-pink" role="listitem"><span aria-hidden="true">+</span><strong>35–44</strong><small>года</small></div>
+                </div>
+                <p class="audience-caption">Возрастные группы из доступной аналитики.<br>Показаны без сравнения долей.</p>
+              </div>
+            </article>
+            <article class="audience-window audience-geography-window" aria-labelledby="audience-geo-title">
+              <div class="audience-window-bar"><span class="audience-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><h4 id="audience-geo-title">География</h4><span class="audience-window-symbol" aria-hidden="true">◎</span></div>
+              <div class="audience-geography-body">
+                <svg class="audience-globe" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+                  <defs><pattern id="audience-globe-dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.8" fill="currentColor"/></pattern></defs>
+                  <circle cx="120" cy="120" r="108" fill="url(#audience-globe-dots)"/>
+                  <g stroke="currentColor" stroke-width="1.5"><circle cx="120" cy="120" r="108"/><ellipse cx="120" cy="120" rx="55" ry="108"/><ellipse cx="120" cy="120" rx="108" ry="42"/><path d="M12 120h216M120 12v216"/></g>
+                </svg>
+                <ul class="audience-country-list" aria-label="Страны аудитории">
+                  <li class="tone-blue">Россия</li><li class="tone-mint">Казахстан</li><li class="tone-purple">Беларусь</li><li class="tone-pink">Кыргызстан</li><li class="tone-yellow">Украина</li>
+                </ul>
+              </div>
+              <p class="audience-caption">Страны, отмеченные в аналитике проекта.<br>Доли по странам не указаны.</p>
+            </article>
+            <article class="audience-window audience-gender-window" aria-labelledby="audience-gender-title">
+              <div class="audience-window-bar"><span class="audience-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><h4 id="audience-gender-title">Состав аудитории</h4><span class="audience-window-symbol" aria-hidden="true">♀♂</span></div>
+              <div class="audience-gender-body">
+                <div class="audience-gender-top"><p>Распределение по полу</p><span class="audience-estimate-label">Расчётная оценка</span></div>
+                <div class="audience-gender-values">
+                  <div class="audience-female"><span><i aria-hidden="true"></i>Женщины</span><strong>52,4<small>%</small></strong></div>
+                  <div class="audience-male"><span><i aria-hidden="true"></i>Мужчины</span><strong>46,9<small>%</small></strong></div>
+                </div>
+                <div class="audience-gender-bar" role="img" aria-label="Расчётная оценка по четырём площадкам: женщины 52,4%, мужчины 46,9%, остаток без разбивки 0,7%">
+                  <span class="audience-female-fill" style="width:52.41789557%"></span><span class="audience-male-fill" style="width:46.91786456%"></span><span class="audience-unallocated-fill" style="width:0.66423987%"></span>
+                </div>
+                <p class="audience-gender-remainder">0,7% — остаток без разбивки в источнике</p>
+                <p class="audience-caption audience-gender-scope">По четырём площадкам, взвешено по подписчикам.</p>
+                <details class="audience-method">
+                  <summary>Как рассчитана оценка <span aria-hidden="true">+</span></summary>
+                  <p>Доли по полу для YouTube, ВКонтакте, Likee и TikTok взвешены по числу подписчиков из отчёта команды. База весов — 64 502 подписки, без устранения пересечений между площадками.</p>
+                  <p>Источник не уточняет, относятся исходные доли к подписчикам или зрителям. Поэтому результат — ориентировочная оценка по четырём площадкам, а не измерение всей уникальной аудитории проекта. Данные остальных площадок в расчёт не входят.</p>
+                </details>
+              </div>
+            </article>
+          </div>
+          <div class="audience-segments-heading"><span>Нас смотрят</span><p>Разные интересы. Общее любопытство.</p></div>
+          <div class="audience-segments">
+            <article class="audience-segment segment-family">
+              <div class="audience-segment-top"><span class="audience-segment-icon"><svg viewBox="0 0 72 60" fill="none" aria-hidden="true"><circle cx="19" cy="15" r="8"/><circle cx="53" cy="15" r="8"/><circle cx="36" cy="31" r="7"/><path d="M5 47v-9c0-9 6-14 14-14 5 0 9 2 12 6M67 47v-9c0-9-6-14-14-14-5 0-9 2-12 6M24 55v-5c0-7 5-12 12-12s12 5 12 12v5"/></svg></span><span class="audience-segment-index">01 /</span></div>
+              <h4>Дети-школьники<br>и родители</h4>
+              <ul class="audience-interest-tags"><li class="tone-purple">Смотрим вместе</li><li class="tone-blue">Учёба</li><li class="tone-mint">Здоровье</li><li class="tone-yellow">Вопросы «почему?»</li></ul>
+              <p>Узнают, как устроено тело, находят понятные ответы и обсуждают открытия всей семьёй.</p>
+            </article>
+            <article class="audience-segment segment-youth">
+              <div class="audience-segment-top"><span class="audience-segment-icon"><svg viewBox="0 0 72 60" fill="none" aria-hidden="true"><path d="m9 22 27-13 27 13-27 13L9 22Z"/><path d="M20 29v13c10 8 22 8 32 0V29M63 23v21"/><path d="m54 51 4-4 4 4"/></svg></span><span class="audience-segment-index">02 /</span></div>
+              <h4>Молодёжь</h4>
+              <ul class="audience-interest-tags"><li class="tone-blue">Короткие видео</li><li class="tone-pink">Развлечения</li><li class="tone-mint">Новые знания</li><li class="tone-yellow">Саморазвитие</li></ul>
+              <p>Смотрят динамичные истории, знакомятся с героями и открывают для себя науку в увлекательном формате.</p>
+            </article>
+            <article class="audience-segment segment-curious">
+              <div class="audience-segment-top"><span class="audience-segment-icon"><svg viewBox="0 0 72 60" fill="none" aria-hidden="true"><path d="M26 39c-5-4-9-8-9-15a19 19 0 0 1 38 0c0 7-4 11-9 15l-2 6H28l-2-6Z"/><path d="M29 51h14M32 57h8M36 2V0M8 20H2M70 20h-6M12 3l5 5M60 3l-5 5"/><path d="m29 25 5 5 10-11"/></svg></span><span class="audience-segment-index">03 /</span></div>
+              <h4>Взрослые<br>без детей</h4>
+              <ul class="audience-interest-tags"><li class="tone-pink">Любопытство</li><li class="tone-purple">Свой организм</li><li class="tone-mint">Понятная наука</li><li class="tone-yellow">Открытия</li></ul>
+              <p>Хотят узнать что-то новое о своём организме и разобраться, как он работает, простым и понятным языком.</p>
+            </article>
+          </div>
+          <p class="audience-source-note">Портрет аудитории за июль–октябрь 2025 года — по материалам команды НАНОБОТОВ. Возраст в аналитике аккаунтов может отличаться от возраста зрителей при семейном просмотре.</p>
+        </section>
 
       </div>
     </section>
