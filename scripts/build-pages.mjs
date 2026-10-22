@@ -1,8 +1,12 @@
-import {build} from 'vite';
-import react from '@vitejs/plugin-react';
 import {fileURLToPath} from 'node:url';
 import {resolve} from 'node:path';
-import {writeFile} from 'node:fs/promises';
+import {cp, mkdir, writeFile} from 'node:fs/promises';
 const root=fileURLToPath(new URL('../',import.meta.url));
-await build({configFile:false,root:resolve(root,'pages'),base:'./',publicDir:resolve(root,'public'),plugins:[{name:'pages-portability',enforce:'pre',transform(code,id){if(!/\/(app\/home-client|lib\/content)\.tsx?$/.test(id))return;return code.replaceAll('"/art/','"./art/').replaceAll('`/art/','`./art/').replaceAll('"/quiz/"','"./quiz/"').replace('<a href="/admin">Редакция сайта</a>','<span>Анимационный образовательный проект</span>');}},react()],resolve:{alias:{'@':root}},define:{'process.env.NODE_ENV':JSON.stringify('production')},build:{outDir:resolve(root,'docs'),emptyOutDir:true}});
-await writeFile(resolve(root,'docs/.nojekyll'),'');
+const output=resolve(root,'docs');
+await mkdir(output,{recursive:true});
+// Keep existing routes and their resources. The approved homepage is static,
+// with no framework runtime or network dependency required to render it.
+await cp(resolve(root,'public'),output,{recursive:true});
+await cp(resolve(root,'pages/homepage'),output,{recursive:true});
+await writeFile(resolve(output,'.nojekyll'),'');
+console.log('GitHub Pages built in docs/: homepage, mediakit, and existing routes.');
