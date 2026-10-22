@@ -6,28 +6,28 @@ const formatData = {
     description: 'Нативные упоминания, продакт-плейсмент и брендированные спецвыпуски. Находим естественную роль бренда внутри сюжета и образовательной темы.',
     chips: ['Нативная интеграция', 'Спецвыпуск', 'Продакт-плейсмент'],
     heading: 'Берём на себя', steps: ['Разработка идеи и сценария', 'Производство анимационного ролика', 'Научная и медицинская валидация', 'Адаптация под нужные площадки', 'Публикация и итоговая статистика'],
-    time: 'От одной недели', price: 'Рассчитываем под задачу', cta: 'Обсудить интеграцию', topic: 'Интеграции в контент', color: '#e7f0ea'
+    time: 'От одной недели', price: 'Рассчитываем под задачу', cta: 'Обсудить интеграцию', topic: 'Интеграции в контент', color: '#e7edff'
   },
   education: {
     type: 'Знания через опыт', title: 'Удивляться<br>Пробовать Понимать',
     description: 'Совместные уроки, мастер-классы и ролики для клиник, школ и городских фестивалей. Создаём проект под аудиторию и задачи партнёра.',
     chips: ['Уроки', 'Мастер-классы', 'Фестивали'],
     heading: 'Берём на себя', steps: ['Концепция, тема и механика проекта', 'Сценарии, видео, задания и материалы', 'Проверка научной и медицинской корректности', 'Поддержка запуска на площадке', 'Фото, видео, обратная связь и итоговый отчёт'],
-    time: '1,5 месяца после согласования', price: 'Рассчитываем под задачу', cta: 'Обсудить образовательный проект', topic: 'Образовательные проекты', color: '#dcecf6'
+    time: '1,5 месяца после согласования', price: 'Рассчитываем под задачу', cta: 'Обсудить образовательный проект', topic: 'Образовательные проекты', color: '#e8f4ee'
   },
   license: {
     type: 'Герои за пределами экрана', title: 'Любимая история<br>Новый продукт',
     description: 'Персонажи и визуальный мир НАНОБОТОВ могут стать частью вашего продукта, упаковки или совместной коллекции.',
     chips: ['Игрушки и книги', 'Упаковка', 'Коллаборации'],
     heading: 'Варианты сотрудничества', steps: ['Игрушки, книги и развивающие продукты', 'Упаковка, POSM и промоматериалы', 'Персонаж-амбассадор продукта или кампании', 'Совместная коллекция «бренд × НАНОБОТЫ»'],
-    time: 'Зависит от формата и производства', price: 'Под категорию, тираж и срок лицензии', cta: 'Обсудить лицензию', topic: 'Лицензирование и мерч', color: '#f5e6c4'
+    time: 'Зависит от формата и производства', price: 'Под категорию, тираж и срок лицензии', cta: 'Обсудить лицензию', topic: 'Лицензирование и мерч', color: '#fff1b0'
   },
   press: {
     type: 'Истории для вашей редакции', title: 'Есть тема?<br>Расскажем вместе',
     description: 'Поможем познакомить читателей с героями, создателями и научной основой проекта. Найдём интересный угол для вашей редакционной задачи.',
     chips: ['Интервью', 'Комментарии', 'Спецпроекты'],
     heading: 'Что можем подготовить', steps: ['Интервью с создателями проекта', 'Экспертные комментарии', 'Колонки и совместные спецпроекты', 'Исследования и эксклюзивные материалы'],
-    time: 'Согласуем с редакцией', price: 'Условия обсуждаем индивидуально', cta: 'Связаться по запросу СМИ', topic: 'Запрос СМИ', color: '#e9e2f1'
+    time: 'Согласуем с редакцией', price: 'Условия обсуждаем индивидуально', cta: 'Связаться по запросу СМИ', topic: 'Запрос СМИ', color: '#eee9ff'
   }
 };
 const $ = (selector) => document.querySelector(selector);
@@ -118,32 +118,4 @@ function showToast(text) {
 $('[data-copy-email]').addEventListener('click', async () => {
   try { await navigator.clipboard.writeText('valikova@4meds.ru'); showToast('Почта скопирована'); }
   catch { showToast('Почта для связи: valikova@4meds.ru'); }
-});
-
-// Each side keeps its natural height; the hidden side cannot receive focus.
-document.querySelectorAll('[data-character]').forEach(card => {
-  const front = card.querySelector('.character-front');
-  const back = card.querySelector('.character-back');
-  const open = card.querySelector('.character-open');
-  const close = card.querySelector('.character-close');
-  const title = back.querySelector('h3');
-  function flip(showDetails) {
-    card.classList.toggle('is-flipped', showDetails);
-    open.setAttribute('aria-expanded', String(showDetails));
-    const activeSide = showDetails ? back : front;
-    const inactiveSide = showDetails ? front : back;
-    activeSide.inert = false;
-    activeSide.removeAttribute('aria-hidden');
-    (showDetails ? title : open).focus({ preventScroll: true });
-    inactiveSide.inert = true;
-    inactiveSide.setAttribute('aria-hidden', 'true');
-  }
-  open.addEventListener('click', () => flip(true));
-  close.addEventListener('click', () => flip(false));
-  card.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && card.classList.contains('is-flipped')) {
-      event.preventDefault();
-      flip(false);
-    }
-  });
 });

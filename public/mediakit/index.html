@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#faf8f5">
+  <meta name="theme-color" content="#171e48">
   <meta name="description" content="НАНОБОТЫ — медиакит для партнёров. 70+ млн просмотров, 100 000 подписчиков. Аудитория, география, интеграции, образовательные проекты и лицензирование.">
   <link rel="canonical" href="https://nanoboti.ru/mediakit/">
   <title>НАНОБОТЫ — медиакит для партнёров</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/Geologica.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="three-d.css?v=audience-20261020">
-  <link rel="stylesheet" href="characters.css">
   <link rel="stylesheet" href="audience.css?v=audience-20261020">
   <link rel="stylesheet" href="partners.css?v=partners-20261020">
-  <script src="app.js?v=headings-20261022" defer></script>
+  <link rel="stylesheet" href="brand.css?v=20261022">
+  <script src="app.js?v=brand-20261022" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">К содержанию</a>
@@ -28,15 +29,16 @@
     <a class="button button-small button-dark header-cta" href="#contact">Обсудить проект <span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильное меню" hidden>
-      <a href="#project">О проекте</a><a href="#numbers">Цифры и аудитория</a><a href="#channels">Наши каналы</a><a href="#heroes">Герои</a><a href="#formats">Сотрудничество</a><a href="#partners">Партнёры</a><a href="#contact">Контакты</a>
+      <a href="#project">О проекте</a><a href="#numbers">Цифры и аудитория</a><a href="#channels">Наши каналы</a><a href="#formats">Сотрудничество</a><a href="#partners">Партнёры</a><a href="#contact">Контакты</a>
     </nav>
   </header>
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-layout">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> Анимационная вселенная для всей семьи</p>
         <h1 id="hero-title">Маленькие герои<br>Большие <span class="coral">возможности</span></h1>
-        <p class="hero-description">Объясняем детям, как работает их тело.<br>Превращаем знания в приключения.<br>Создаём полезные проекты вместе с брендами.</p>
+        <p class="hero-description">Объясняем детям, как работает их тело.<br> Превращаем знания в приключения.<br> Создаём полезные проекты вместе с брендами.</p>
         <div class="hero-actions">
           <a class="button button-dark" href="#formats">Стать частью истории <span aria-hidden="true">↗</span></a>
           <a class="text-link" href="#numbers">Медиакит в цифрах <span aria-hidden="true">↓</span></a>
@@ -49,6 +51,7 @@
         <span class="scene-label label-mission"><span class="tiny-cross" aria-hidden="true">✦</span> Целая вселенная внутри тебя</span>
       </div>
       <div class="hero-bottom"><span>Для брендов, образовательных проектов и СМИ</span><a href="#project" aria-label="Далее: о проекте">Листайте, знакомьтесь <span aria-hidden="true">↓</span></a></div>
+      </div>
     </section>
 
     <section class="section wrap project-section" id="project" aria-labelledby="project-title">
@@ -97,7 +100,7 @@
             <article class="audience-window audience-age-window" aria-labelledby="audience-age-title">
               <div class="audience-window-bar"><span class="audience-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><h4 id="audience-age-title">Возраст</h4><span class="audience-window-symbol" aria-hidden="true">↗</span></div>
               <div class="audience-age-body">
-                <p class="audience-window-lead">От школьников<br>до взрослых</p>
+                <p class="audience-window-lead">От школьников<br> до взрослых</p>
                 <div class="audience-age-groups" role="list" aria-label="Возрастные группы без процентных долей">
                   <div class="audience-age-group tone-blue" role="listitem"><span aria-hidden="true">✳</span><strong>до 18</strong><small>лет</small></div>
                   <div class="audience-age-group tone-mint" role="listitem"><span aria-hidden="true">↗</span><strong>18–24</strong><small>года</small></div>
@@ -183,152 +186,9 @@
       </div>
     </section>
 
-    <section class="section wrap heroes-section" id="heroes" aria-labelledby="heroes-title">
-      <div class="heading-row"><div><p class="eyebrow"><span class="section-index">04</span> Герои и визуальный мир</p><h2 id="heroes-title">Пять характеров<br><span class="coral">Одна команда</span></h2></div><p class="heading-aside">Крошечные роботы, созданные Петром,<br>исследуют и защищают его организм.<br><span class="heroes-instruction">Нажмите на героя, чтобы узнать его историю.</span></p></div>
-      <div class="hero-cards">
-        <article class="character-card card-vector" data-character="vector" aria-label="Вектор">
-          <div class="character-inner">
-            <div class="character-face character-front">
-              <span class="character-number">01 /</span>
-              <div class="character-portrait"><img src="assets/characters/vector.webp" alt="Вектор — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
-              <h3>Вектор</h3>
-              <p class="character-role">Терапевт · Диагност</p>
-              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
-              <button class="character-open" type="button" aria-label="Познакомиться: Вектор" aria-expanded="false" aria-controls="vector-details"></button>
-            </div>
-            <div class="character-face character-back" id="vector-details" aria-hidden="true" inert>
-              <div class="character-back-heading"><span class="character-number">01 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
-              <h3 id="vector-details-title" tabindex="-1">Вектор</h3>
-              <p class="character-role">Терапевт · Диагност</p>
-              <p class="character-story">Капитан корабля и мозг команды. Вектор знает ответы на тысячи вопросов, верит в логику и действует по инструкции. Иногда уверенность превращается в упрямство: ему непросто принять решение «не по правилам». Он учится отпускать контроль и доверять друзьям.</p>
-              <h4>Роль в команде</h4>
-              <p>Анализирует симптомы, ставит диагноз и координирует команду во время миссий.</p>
-              <h4>Суперспособности</h4>
-              <ul class="character-powers">
-                  <li><strong>Энциклопедический поиск</strong> — мгновенно находит нужные знания в планшете.</li>
-                  <li><strong>3D-навигация</strong> — видит карту организма Петра, маршруты и опасные зоны.</li>
-                  <li><strong>Голографический проектор</strong> — показывает команде изображения и записи.</li>
-              </ul>
-              <button class="character-close" type="button" aria-label="Вернуться к портрету: Вектор"><span aria-hidden="true">↶</span> К портрету</button>
-            </div>
-          </div>
-        </article>
-        <article class="character-card card-endo" data-character="endo" aria-label="Эндо">
-          <div class="character-inner">
-            <div class="character-face character-front">
-              <span class="character-number">02 /</span>
-              <div class="character-portrait"><img src="assets/characters/endo.webp" alt="Эндо — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
-              <h3>Эндо</h3>
-              <p class="character-role">Хирург</p>
-              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
-              <button class="character-open" type="button" aria-label="Познакомиться: Эндо" aria-expanded="false" aria-controls="endo-details"></button>
-            </div>
-            <div class="character-face character-back" id="endo-details" aria-hidden="true" inert>
-              <div class="character-back-heading"><span class="character-number">02 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
-              <h3 id="endo-details-title" tabindex="-1">Эндо</h3>
-              <p class="character-role">Хирург</p>
-              <p class="character-story">Дерзкий, импульсивный второй пилот. Эндо первым бросается в приключение, а обдумывает риск уже потом. Смелость порой заводит его в беду, зато он вдохновляет друзей не сдаваться. Спорит с Вектором, но всегда готов его защитить. Учится слушать других и ценить взаимопомощь.</p>
-              <h4>Роль в команде</h4>
-              <p>Защищает команду. С помощью бластера режет, сшивает и прижигает.</p>
-              <h4>Суперспособности</h4>
-              <ul class="character-powers">
-                  <li><strong>Многофункциональный бластер</strong> — импульс отпугивает врагов, клеевой луч фиксирует объекты, разрезатель открывает проходы.</li>
-                  <li><strong>Силовое поле</strong> — ненадолго создаёт защитный барьер.</li>
-                  <li><strong>Турборывок</strong> — колёсики в ступнях помогают резко ускориться и преодолеть преграду.</li>
-              </ul>
-              <button class="character-close" type="button" aria-label="Вернуться к портрету: Эндо"><span aria-hidden="true">↶</span> К портрету</button>
-            </div>
-          </div>
-        </article>
-        <article class="character-card card-mikra" data-character="mikra" aria-label="Микра">
-          <div class="character-inner">
-            <div class="character-face character-front">
-              <span class="character-number">03 /</span>
-              <div class="character-portrait"><img src="assets/characters/mikra.webp" alt="Микра — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
-              <h3>Микра</h3>
-              <p class="character-role">Биолог · Биохимик</p>
-              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
-              <button class="character-open" type="button" aria-label="Познакомиться: Микра" aria-expanded="false" aria-controls="mikra-details"></button>
-            </div>
-            <div class="character-face character-back" id="mikra-details" aria-hidden="true" inert>
-              <div class="character-back-heading"><span class="character-number">03 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
-              <h3 id="mikra-details-title" tabindex="-1">Микра</h3>
-              <p class="character-role">Биолог · Биохимик</p>
-              <p class="character-story">Осторожная исследовательница, которая замечает то, что упускают остальные. Микра боится микробов, темноты и даже собственной тени, но её внимание к деталям часто спасает команду. С каждой миссией она становится смелее, учится доверять интуиции и действовать первой.</p>
-              <h4>Роль в команде</h4>
-              <p>Берёт пробы, измеряет концентрации веществ, изучает «жителей» организма Петра и проверяет, всё ли в порядке.</p>
-              <h4>Суперспособности</h4>
-              <ul class="character-powers">
-                  <li><strong>Биосканер</strong> — анализирует кровь, лимфу и слюну.</li>
-                  <li><strong>Нюховой сенсор</strong> — улавливает мельчайшие изменения среды.</li>
-                  <li><strong>Биоимпульс</strong> — успокаивает клетки или активирует их работу.</li>
-                  <li><strong>Обострённая бдительность</strong> — позволяет заметить скрытые угрозы.</li>
-              </ul>
-              <button class="character-close" type="button" aria-label="Вернуться к портрету: Микра"><span aria-hidden="true">↶</span> К портрету</button>
-            </div>
-          </div>
-        </article>
-        <article class="character-card card-luksi" data-character="luksi" aria-label="Люкси">
-          <div class="character-inner">
-            <div class="character-face character-front">
-              <span class="character-number">04 /</span>
-              <div class="character-portrait"><img src="assets/characters/luksi.webp" alt="Люкси — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
-              <h3>Люкси</h3>
-              <p class="character-role">Репортёр · Лучевая диагностика</p>
-              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
-              <button class="character-open" type="button" aria-label="Познакомиться: Люкси" aria-expanded="false" aria-controls="luksi-details"></button>
-            </div>
-            <div class="character-face character-back" id="luksi-details" aria-hidden="true" inert>
-              <div class="character-back-heading"><span class="character-number">04 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
-              <h3 id="luksi-details-title" tabindex="-1">Люкси</h3>
-              <p class="character-role">Репортёр · Лучевая диагностика</p>
-              <p class="character-story">Энергичная репортёрша: всегда на связи, всё фиксирует и обо всём расспрашивает. Для Люкси каждое приключение — новость. Она любит внимание и порой перебивает друзей, спеша поделиться находкой. Учится слушать команду, разделять ответственность и направлять любопытство на общее дело.</p>
-              <h4>Роль в команде</h4>
-              <p>Ведёт хронику миссий, берёт интервью у клеток и готовит визуальные отчёты. Просвечивает ткани и органы, обнаруживая скрытые процессы.</p>
-              <h4>Суперспособности</h4>
-              <ul class="character-powers">
-                  <li><strong>Прожектор и вспышка</strong> — освещает тёмные зоны и ненадолго останавливает врагов.</li>
-                  <li><strong>Дрон-камера</strong> — снимает в труднодоступных местах.</li>
-                  <li><strong>Мгновенный повтор</strong> — воспроизводит события из своего архива.</li>
-              </ul>
-              <button class="character-close" type="button" aria-label="Вернуться к портрету: Люкси"><span aria-hidden="true">↶</span> К портрету</button>
-            </div>
-          </div>
-        </article>
-        <article class="character-card card-omni" data-character="omni" aria-label="Омни">
-          <div class="character-inner">
-            <div class="character-face character-front">
-              <span class="character-number">05 /</span>
-              <div class="character-portrait"><img src="assets/characters/omni.webp" alt="Омни — 3D-персонаж НАНОБОТОВ" width="1024" height="1536" loading="lazy" decoding="async"></div>
-              <h3>Омни</h3>
-              <p class="character-role">Поддержка · Логистика</p>
-              <span class="flip-hint" aria-hidden="true">Познакомиться <span>↻</span></span>
-              <button class="character-open" type="button" aria-label="Познакомиться: Омни" aria-expanded="false" aria-controls="omni-details"></button>
-            </div>
-            <div class="character-face character-back" id="omni-details" aria-hidden="true" inert>
-              <div class="character-back-heading"><span class="character-number">05 / О герое</span><span class="character-mark" aria-hidden="true">✦</span></div>
-              <h3 id="omni-details-title" tabindex="-1">Омни</h3>
-              <p class="character-role">Поддержка · Логистика</p>
-              <p class="character-story">Надёжный и заботливый помощник — настоящее сердце команды. Омни чинит, подзаряжает и подстраховывает друзей. Он добрый, чуткий и иногда слишком осторожный, но рядом с ним всем спокойно. Говорит мало; если уж заговорил — стоит прислушаться.</p>
-              <h4>Роль в команде</h4>
-              <p>Ремонтирует наноботов после миссий, восстанавливает их энергию, перевозит оборудование и помогает с тяжёлой работой.</p>
-              <h4>Суперспособности</h4>
-              <ul class="character-powers">
-                  <li><strong>Руки-силовики</strong> — вытягиваются и превращаются в захваты, щиты или тиски.</li>
-                  <li><strong>Энергопередача</strong> — экстренно подзаряжает товарищей.</li>
-                  <li><strong>Рюкзак поддержки</strong> — хранит запасные части и микродевайсы для ремонта.</li>
-              </ul>
-              <button class="character-close" type="button" aria-label="Вернуться к портрету: Омни"><span aria-hidden="true">↶</span> К портрету</button>
-            </div>
-          </div>
-        </article>
-      </div>
-      <p class="heroes-team-note">У каждого — своя специальность. Их общая сила — дружба, взаимопомощь и доверие.</p>
-    </section>
-
-    <section class="formats-section" id="formats" aria-labelledby="formats-title">
+<section class="formats-section" id="formats" aria-labelledby="formats-title">
       <div class="wrap section">
-        <div class="heading-row"><div><p class="eyebrow"><span class="section-index">05</span> Вместе с вашим брендом</p><h2 id="formats-title">Есть задача<br>Найдём <span class="mint">формат</span></h2></div><p class="heading-aside">От первого знакомства с продуктом<br> до совместной коллекции с героями.</p></div>
+        <div class="heading-row"><div><p class="eyebrow"><span class="section-index">04</span> Вместе с вашим брендом</p><h2 id="formats-title">Есть задача<br>Найдём <span class="mint">формат</span></h2></div><p class="heading-aside">От первого знакомства с продуктом<br> до совместной коллекции с героями.</p></div>
         <div class="format-layout">
           <div class="format-tabs" role="tablist" aria-label="Форматы сотрудничества" aria-orientation="vertical">
             <button id="format-tab-content" role="tab" aria-selected="true" aria-controls="format-panel" data-format="content"><span>01</span><b>Интеграции<br>в контент</b><i aria-hidden="true">↗</i></button>
@@ -352,7 +212,7 @@
     </section>
 
     <section class="section wrap process-section" aria-labelledby="process-title">
-      <div class="section-heading"><p class="eyebrow"><span class="section-index">06</span> Как начинается сотрудничество</p><h2 id="process-title">От вашей идеи<br>до общей истории</h2></div>
+      <div class="section-heading"><p class="eyebrow"><span class="section-index">05</span> Как начинается сотрудничество</p><h2 id="process-title">От вашей идеи<br>до общей истории</h2></div>
       <div class="process-grid">
         <article><span>01</span><h3>Знакомимся</h3><p>Вы рассказываете о бренде, аудитории и задаче.</p></article>
         <article><span>02</span><h3>Придумываем</h3><p>Предлагаем концепцию и формат. Согласуем сроки, бюджет и показатели.</p></article>
