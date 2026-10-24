@@ -16,7 +16,7 @@
   <link rel="preload" href="../assets/fonts/Geologica.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="three-d.css?v=audience-20261020">
-  <link rel="stylesheet" href="audience.css?v=audience-20261020">
+  <link rel="stylesheet" href="audience.css?v=audience-20261024">
   <link rel="stylesheet" href="partners.css?v=partners-20261020">
   <link rel="stylesheet" href="brand.css?v=20261022-downloads">
   <script src="app.js?v=brand-20261022" defer></script>
@@ -106,57 +106,77 @@
         <section class="audience-overview" id="audience" aria-labelledby="audience-title">
           <div class="audience-overview-heading">
             <div><p class="eyebrow">Одна вселенная — разные зрители</p><h3 id="audience-title">Кто нас смотрит</h3></div>
-            <p class="audience-period"><span class="status-dot" aria-hidden="true"></span> Июль — октябрь 2025</p>
+            <p class="audience-period"><span class="status-dot" aria-hidden="true"></span> Обновлено 24 октября 2026</p>
           </div>
+          <p class="audience-overview-intro">Ориентировочный портрет по статистике площадок. Каждая площадка имеет равный вес в расчёте.</p>
           <div class="audience-dashboard">
             <article class="audience-window audience-age-window" aria-labelledby="audience-age-title">
               <div class="audience-window-bar"><span class="audience-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><h4 id="audience-age-title">Возраст</h4><span class="audience-window-symbol" aria-hidden="true">↗</span></div>
               <div class="audience-age-body">
-                <p class="audience-window-lead">От школьников<br> до взрослых</p>
-                <div class="audience-age-groups" role="list" aria-label="Возрастные группы без процентных долей">
-                  <div class="audience-age-group tone-blue" role="listitem"><span aria-hidden="true">✳</span><strong>до 18</strong><small>лет</small></div>
-                  <div class="audience-age-group tone-mint" role="listitem"><span aria-hidden="true">↗</span><strong>18–24</strong><small>года</small></div>
-                  <div class="audience-age-group tone-purple" role="listitem"><span aria-hidden="true">✦</span><strong>25–34</strong><small>года</small></div>
-                  <div class="audience-age-group tone-pink" role="listitem"><span aria-hidden="true">+</span><strong>35–44</strong><small>года</small></div>
+                <div class="audience-core"><strong>≈67<small>%</small></strong><p>аудитории 18+<br>в возрасте <b>25–44 лет</b></p></div>
+                <p class="audience-chart-label">Возраст среди аудитории 18+</p>
+                <ul class="audience-age-chart" aria-label="Среднее распределение возраста 18+ по YouTube, Instagram и TikTok; округлено до целых процентов">
+                  <li class="tone-blue" data-age="18-24"><div><span>18–24 года</span><strong>20%</strong></div><span class="audience-age-track" aria-hidden="true"><i style="width:19.84037593%"></i></span></li>
+                  <li class="tone-purple" data-age="25-34"><div><span>25–34 года</span><strong>41%</strong></div><span class="audience-age-track" aria-hidden="true"><i style="width:40.72075472%"></i></span></li>
+                  <li class="tone-pink" data-age="35-44"><div><span>35–44 года</span><strong>26%</strong></div><span class="audience-age-track" aria-hidden="true"><i style="width:26.42947181%"></i></span></li>
+                  <li class="tone-mint" data-age="45-54"><div><span>45–54 года</span><strong>7%</strong></div><span class="audience-age-track" aria-hidden="true"><i style="width:6.98059657%"></i></span></li>
+                  <li class="tone-yellow" data-age="55+"><div><span>55 лет и старше</span><strong>6%</strong></div><span class="audience-age-track" aria-hidden="true"><i style="width:6.02880096%"></i></span></li>
+                </ul>
+                <p class="audience-caption">Среднее по YouTube, Instagram и TikTok.<br>Доли пересчитаны внутри группы 18+.</p>
+                <div class="audience-teens-note">
+                  <strong>≈6<small>%</small></strong>
+                  <p><b>13–17 лет</b><span>Средняя доля во всей аудитории YouTube и Instagram. В TikTok эта группа не показана.</span></p>
                 </div>
-                <p class="audience-caption">Возрастные группы из доступной аналитики.<br>Показаны без сравнения долей.</p>
               </div>
             </article>
             <article class="audience-window audience-geography-window" aria-labelledby="audience-geo-title">
               <div class="audience-window-bar"><span class="audience-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><h4 id="audience-geo-title">География</h4><span class="audience-window-symbol" aria-hidden="true">◎</span></div>
-              <div class="audience-geography-body">
+              <div class="audience-geography-body audience-geo-estimate">
                 <svg class="audience-globe" viewBox="0 0 240 240" fill="none" aria-hidden="true">
                   <defs><pattern id="audience-globe-dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.8" fill="currentColor"/></pattern></defs>
                   <circle cx="120" cy="120" r="108" fill="url(#audience-globe-dots)"/>
                   <g stroke="currentColor" stroke-width="1.5"><circle cx="120" cy="120" r="108"/><ellipse cx="120" cy="120" rx="55" ry="108"/><ellipse cx="120" cy="120" rx="108" ry="42"/><path d="M12 120h216M120 12v216"/></g>
                 </svg>
-                <ul class="audience-country-list" aria-label="Страны аудитории">
-                  <li class="tone-blue">Россия</li><li class="tone-mint">Казахстан</li><li class="tone-purple">Беларусь</li><li class="tone-pink">Кыргызстан</li><li class="tone-yellow">Украина</li>
+                <ul class="audience-country-stats" aria-label="Средние доли стран по YouTube, Instagram и TikTok; округлено до целых процентов">
+                  <li class="tone-blue" data-country="Russia"><span>Россия</span><strong>≈25<small>%</small></strong></li>
+                  <li class="tone-mint" data-country="Kazakhstan"><span>Казахстан</span><strong>≈19<small>%</small></strong></li>
+                  <li class="tone-purple" data-country="Ukraine"><span>Украина</span><strong>≈13<small>%</small></strong></li>
+                  <li class="tone-yellow" data-country="other"><span>Другие страны</span><strong>≈43<small>%</small></strong></li>
                 </ul>
               </div>
-              <p class="audience-caption">Страны, отмеченные в аналитике проекта.<br>Доли по странам не указаны.</p>
+              <p class="audience-caption">Среднее по YouTube, Instagram и TikTok. Три страны, доли которых указаны на всех трёх площадках; остальные объединены.</p>
+              <p class="audience-vk-cities"><b>Города во ВКонтакте</b><span>Москва — 31% · Санкт-Петербург — 14,2%</span></p>
             </article>
             <article class="audience-window audience-gender-window" aria-labelledby="audience-gender-title">
               <div class="audience-window-bar"><span class="audience-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><h4 id="audience-gender-title">Состав аудитории</h4><span class="audience-window-symbol" aria-hidden="true">♀♂</span></div>
               <div class="audience-gender-body">
                 <div class="audience-gender-top"><p>Распределение по полу</p><span class="audience-estimate-label">Расчётная оценка</span></div>
                 <div class="audience-gender-values">
-                  <div class="audience-female"><span><i aria-hidden="true"></i>Женщины</span><strong>52,4<small>%</small></strong></div>
-                  <div class="audience-male"><span><i aria-hidden="true"></i>Мужчины</span><strong>46,9<small>%</small></strong></div>
+                  <div class="audience-female"><span><i aria-hidden="true"></i>Женщины</span><strong>51,6<small>%</small></strong></div>
+                  <div class="audience-male"><span><i aria-hidden="true"></i>Мужчины</span><strong>48,0<small>%</small></strong></div>
                 </div>
-                <div class="audience-gender-bar" role="img" aria-label="Расчётная оценка по четырём площадкам: женщины 52,4%, мужчины 46,9%, остаток без разбивки 0,7%">
-                  <span class="audience-female-fill" style="width:52.41789557%"></span><span class="audience-male-fill" style="width:46.91786456%"></span><span class="audience-unallocated-fill" style="width:0.66423987%"></span>
+                <div class="audience-gender-bar" role="img" aria-label="Среднее по четырём площадкам: женщины 51,6%, мужчины 48,0%, другие категории и неуказанный пол 0,4%">
+                  <span class="audience-female-fill" style="width:51.56126374%"></span><span class="audience-male-fill" style="width:47.98878621%"></span><span class="audience-unallocated-fill" style="width:0.44995005%"></span>
                 </div>
-                <p class="audience-gender-remainder">0,7% — остаток без разбивки в источнике</p>
-                <p class="audience-caption audience-gender-scope">По четырём площадкам, взвешено по подписчикам.</p>
-                <details class="audience-method">
-                  <summary>Как рассчитана оценка <span aria-hidden="true">+</span></summary>
-                  <p>Доли по полу для YouTube, ВКонтакте, Likee и TikTok взвешены по числу подписчиков из отчёта команды. База весов — 64 502 подписки, без устранения пересечений между площадками.</p>
-                  <p>Источник не уточняет, относятся исходные доли к подписчикам или зрителям. Поэтому результат — ориентировочная оценка по четырём площадкам, а не измерение всей уникальной аудитории проекта. Данные остальных площадок в расчёт не входят.</p>
-                </details>
+                <p class="audience-gender-remainder">0,4% — другие категории и неуказанный пол</p>
+                <p class="audience-caption audience-gender-scope">Среднее по YouTube, Instagram, TikTok и ВКонтакте. Значения округлены до десятых.</p>
               </div>
             </article>
           </div>
+          <details class="audience-method audience-method-overview">
+            <summary>Как рассчитаны показатели и какие данные использованы <span aria-hidden="true">+</span></summary>
+            <div class="audience-method-columns">
+              <div>
+                <p><b>Общий принцип</b> — среднее арифметическое долей: каждая площадка имеет одинаковый вес. Размеры сопоставимых аудиторий не предоставлены, поэтому это усреднённый портрет площадок, а не доли всей уникальной аудитории проекта. В источниках смешаны просмотры, подписчики и аудитория аккаунтов.</p>
+                <p><b>Возраст</b> — YouTube, Instagram и TikTok. Чтобы сравнить одинаковые группы, из первых двух площадок исключена группа 13–17 лет, доли взрослых пересчитаны до 100%, а группы 55–64 и 65+ объединены в 55+. Затем рассчитано среднее. Возраст во ВКонтакте не включён: точные значения не подписаны, а интервалы отличаются. Доля 13–17 лет показана отдельно как среднее исходных 6,5% и 5,3% по YouTube и Instagram; отсутствие этой группы в TikTok не принято за ноль.</p>
+              </div>
+              <div>
+                <p><b>Пол</b> — среднее по четырём площадкам. Исходные доли приведены к 100%: в YouTube их сумма равна 100,1% из-за округления. Категории «определено пользователем», «другое» и «не указано» объединены; остаток ВКонтакте рассчитан как 100 − 52,6 − 46,8 = 0,6%.</p>
+                <p><b>География</b> — среднее по трём площадкам с данными о странах. Россия, Казахстан и Украина явно указаны в каждом списке. Доля остальных стран рассчитана как остаток; в неё входят в том числе Кыргызстан, Беларусь и Узбекистан. Отсутствующие в списках страны не считаются нулём. Города ВКонтакте приведены отдельно и в доли стран не входят.</p>
+                <p><b>Периоды</b> — YouTube и TikTok: 24.10.2025–23.10.2026; ВКонтакте: 18.10.2025–24.10.2026. Период Instagram на скриншотах не указан. Возраст и география округлены до целых процентов, пол — до десятых; размеры полос построены по неокруглённым значениям.</p>
+              </div>
+            </div>
+          </details>
           <div class="audience-segments-heading"><span>Нас смотрят</span><p>Разные интересы. Общее любопытство.</p></div>
           <div class="audience-segments">
             <article class="audience-segment segment-family">
@@ -178,7 +198,7 @@
               <p>Хотят узнать что-то новое о своём организме и разобраться, как он работает, простым и понятным языком.</p>
             </article>
           </div>
-          <p class="audience-source-note">Портрет аудитории за июль–октябрь 2025 года — по материалам команды НАНОБОТОВ. Возраст в аналитике аккаунтов может отличаться от возраста зрителей при семейном просмотре.</p>
+          <p class="audience-source-note">Источник: скриншоты аналитики, предоставленные командой НАНОБОТОВ, обновление от 24 октября 2026 года. Возраст в аналитике аккаунтов может отличаться от возраста зрителей при семейном просмотре.</p>
         </section>
 
       </div>

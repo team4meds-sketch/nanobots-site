@@ -1,0 +1,49 @@
+{
+  "updated": "2026-10-24",
+  "source": "Screenshots supplied by the project team on 2026-10-24; filenames refer to the original local attachments",
+  "platforms": {
+    "youtube": {
+      "period": "2025-10-24/2026-10-23",
+      "basis": "views",
+      "gender": {"female": 55.0, "male": 44.9, "other": 0.2},
+      "age": {"13-17": 6.5, "18-24": 9.0, "25-34": 34.6, "35-44": 33.0, "45-54": 9.2, "55-64": 4.3, "65+": 3.4},
+      "countries": {"Russia": 19.6, "Kazakhstan": 21.0, "Ukraine": 16.1, "Kyrgyzstan": 7.4, "Belarus": 6.5, "Uzbekistan": 5.2, "Germany": 2.5, "Moldova": 1.3, "Poland": 1.2, "USA": 1.2},
+      "screenshots": ["codex-clipboard-9652a502-f16e-4b89-91d1-489127243f7a.png", "codex-clipboard-03a45290-2ac4-4985-a338-89eb026376d8.png", "codex-clipboard-6d1d8e5a-cc97-4e86-9ce8-fb8391a49f21.png"]
+    },
+    "instagram": {
+      "period": null,
+      "basis": "audience; exact denominator and period not visible",
+      "gender": {"female": 74.5, "male": 25.5, "other": 0},
+      "age": {"13-17": 5.3, "18-24": 16.0, "25-34": 43.9, "35-44": 26.7, "45-54": 5.4, "55-64": 1.6, "65+": 1.1},
+      "countries": {"Russia": 32.3, "Kazakhstan": 20.0, "Kyrgyzstan": 17.7, "Uzbekistan": 6.1, "Ukraine": 4.4},
+      "screenshots": ["codex-clipboard-181d5ede-82ab-4d5c-915b-3108f0639bdd.png", "codex-clipboard-2cf197db-8e06-4b76-adec-f1eb1cae7dcf.png"]
+    },
+    "tiktok": {
+      "period": "2025-10-24/2026-10-23",
+      "basis": "followers",
+      "gender": {"female": 30, "male": 69, "other": 1},
+      "age": {"18-24": 33.0, "25-34": 38.8, "35-44": 15.8, "45-54": 5.4, "55+": 7.0},
+      "countries": {"Russia": 23.5, "Ukraine": 19.4, "Kazakhstan": 14.7, "Belarus": 6.5, "Moldova": 1.9},
+      "screenshots": ["codex-clipboard-09748db2-7293-4dee-a081-4ce1a7a3093d.png", "codex-clipboard-eb61fe7b-9f2a-45e8-a66e-09218170d5f7.png", "codex-clipboard-1b6673e7-2788-471c-a776-2338417cee9d.png"]
+    },
+    "vk": {
+      "period": "2025-10-18/2026-10-24",
+      "basis": "community audience",
+      "gender": {"female": 46.8, "male": 52.6, "other": 0.6},
+      "genderNote": "Unspecified is shown as <1%; 0.6 is the residual 100 - 46.8 - 52.6",
+      "age": null,
+      "ageNote": "Chart has no numeric labels and incompatible age bins; excluded from the age calculation",
+      "countries": null,
+      "cities": {"Moscow": 31.0, "Saint Petersburg": 14.2, "Chelyabinsk": 9.7, "Yekaterinburg": 9.4, "Novosibirsk": 6.6},
+      "screenshots": ["codex-clipboard-be764d5a-4192-458a-a67e-ba739b861ed4.png"]
+    }
+  },
+  "method": {
+    "weights": "Equal weight per available compatible platform, NOT weighted by followers or views; NOT a deduplicated total audience",
+    "gender": "Normalize each platform total to 100 before taking an arithmetic mean; YouTube totals 100.1 due to rounding. Other combines user-defined, other and unspecified categories",
+    "age": "Use 18+ only from YouTube, Instagram and TikTok. Combine 55-64 and 65+ into 55+, normalize each adult distribution to 100, then average. The absence of under-18 in TikTok is not a zero",
+    "teens": "Separate mean of 13-17 shares in YouTube and Instagram, on their full reported audience bases",
+    "geography": "Average Russia, Kazakhstan and Ukraine, which all three country lists explicitly report. Other countries is the complement of those three within each platform. Missing countries are not zeros. VK cities are shown separately",
+    "rounding": "Age and geography: nearest whole percent. Gender: one decimal. Bar widths retain unrounded values"
+  }
+}
