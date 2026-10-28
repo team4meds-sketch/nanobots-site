@@ -4,7 +4,7 @@ export const socials=[
 {name:"RUTUBE",icon:"/art/social/rutube.svg",url:"https://rutube.ru/channel/68047778",short:"RU",color:"#19213a"},
 {name:"YouTube",icon:"/art/social/youtube.svg",url:"https://youtube.com/@nanobots_mult",short:"▶",color:"#e92835"},
 {name:"Telegram",icon:"/art/social/telegram.svg",url:"https://t.me/nanobots_mult",short:"TG",color:"#168ebc"},
-{name:"TikTok",icon:"/art/social/tiktok.svg",url:"https://www.tiktok.com/@nanobots_mult1",short:"TK",color:"#182344"},
+{name:"TikTok",icon:"/art/social/tiktok.svg",url:"https://www.tiktok.com/@nanobots_mult",short:"TK",color:"#182344"},
 {name:"Likee",icon:"/art/social/likee.png",url:"https://l.likee.video/p/8qpTgD",short:"L",color:"#d43b80"},
 {name:"Instagram",icon:"/art/social/instagram.svg",url:"https://www.instagram.com/nanobots_mult",short:"IG",color:"#b52f7f"},
 {name:"MAX",icon:"/art/social/max.svg",url:"https://max.ru/channel_id5040174570_biz",short:"M",color:"#5751df"}];
