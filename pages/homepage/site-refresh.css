@@ -57,11 +57,12 @@ html:has(.site-refresh){scroll-padding-top:106px}
 .home-page .episode-poster>.team-dna-scene{object-fit:contain;aspect-ratio:1672/941}
 .trailer-link{display:flex;align-items:center;gap:20px;width:max-content;max-width:100%;margin-top:24px;font-size:16px;min-height:44px}
 .trailer-link>span{color:var(--muted);font-size:14px}
-.channel-picker{margin-top:12px;max-width:100%}
-.channel-picker>summary,.audience-personas>summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none;min-height:54px;font-size:16px;font-weight:500;gap:16px}
-.channel-picker>summary::-webkit-details-marker,.audience-personas>summary::-webkit-details-marker{display:none}
-.channel-picker>summary>span,.audience-personas>summary>span{font-size:25px}
-.channel-picker[open]>summary>span,.audience-personas[open]>summary>span{transform:rotate(45deg)}
+.channel-picker{margin-top:28px;max-width:100%}
+.channel-heading{font-size:16px;font-weight:550;margin:0}
+.audience-personas>summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none;min-height:54px;font-size:16px;font-weight:500;gap:16px}
+.audience-personas>summary::-webkit-details-marker{display:none}
+.audience-personas>summary>span{font-size:25px}
+.audience-personas[open]>summary>span{transform:rotate(45deg)}
 .site-refresh .channel-row{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
 .site-refresh .channel-row a{display:flex;flex-direction:row;font-size:14px;min-height:60px;padding:14px 18px;gap:12px;background:var(--surface);border:0;border-radius:12px}
 .site-refresh .channel-row img{width:26px;height:26px}.site-refresh .channel-row i{margin-left:auto}
